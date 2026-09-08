@@ -3,7 +3,7 @@ name: Game Name Radar
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 0 * * * *"
+    - cron: "17 0 * * *"
   push:
     branches: [main]
     paths:
