@@ -1,15 +1,8 @@
 {
-  "checkedAt": "2026-09-08T06:32:04.031Z",
-  "configured": true,
-  "ok": true,
+  "checkedAt": "2026-09-08T07:57:35.178Z",
+  "configured": false,
+  "ok": false,
   "provider": "apify",
   "accountApiConsumesActorCredits": false,
-  "accountFingerprint": "bcfb84530d51",
-  "username": "FOXIREN",
-  "plan": {
-    "id": "FREE",
-    "name": null,
-    "monthlyUsageCreditsUsd": 5,
-    "monthlyUsageCredits": null
-  }
+  "error": "APIFY_API_TOKEN is not configured"
 }
