@@ -12,9 +12,7 @@ on:
       - "lib/**"
       - "scripts/**"
       - "tests/**"
-      - "app.js"
-      - "index.html"
-      - ".github/workflows/radar.yml"
+
 
 permissions:
   contents: write
