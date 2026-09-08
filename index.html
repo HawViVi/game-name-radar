@@ -21,14 +21,14 @@
     <section class="stats" aria-label="筛选统计">
       <article><span>监控入口</span><strong id="sourceCount">0</strong><small>榜单、RSS、Steam、趋势等</small></article>
       <article><span>本轮新发现</span><strong id="newCount">0</strong><small>仅代表首次抓到，不代表新词</small></article>
-      <article class="accent"><span>在线上涨观察</span><strong id="onlineCount">0</strong><small>上涨词中仍需排除老词与占位站</small></article>
-      <article><span>Wiki上涨观察</span><strong id="wikiCount">0</strong><small>已有专站时不再算新词机会</small></article>
+      <article id="onlineRisingCard" class="accent trend-card" role="button" tabindex="0" aria-controls="resultsSection"><span>在线上涨观察</span><strong id="onlineCount">0</strong><small id="onlineRisingNames" class="trend-names">暂无上涨词</small><small>上涨词中仍需排除老词与占位站</small></article>
+      <article id="wikiRisingCard" class="trend-card" role="button" tabindex="0" aria-controls="resultsSection"><span>Wiki上涨观察</span><strong id="wikiCount">0</strong><small id="wikiRisingNames" class="trend-names">暂无上涨词</small><small>已有专站时不再算新词机会</small></article>
     </section>
     <section class="source-health">
       <div class="section-title compact"><div><p class="eyebrow">AUTOMATION STATUS</p><h2>自动任务状态</h2></div><button id="refreshBtn" class="button">刷新结果</button></div>
       <div id="sourceChips" class="source-chips"><span class="muted">正在读取扫描报告…</span></div>
     </section>
-    <section class="results">
+    <section id="resultsSection" class="results">
       <div class="section-title">
         <div><p class="eyebrow">ACTIONABLE OPPORTUNITIES</p><h2>现在值得测试的游戏词</h2><p>默认展示两类可行动结果：<strong>test-now</strong> 用30%成本先测真实水花；<strong>independent</strong> 代表证据已经完整，可以正式加码。</p></div>
         <div class="filters">
@@ -44,6 +44,6 @@
     <footer>Game Name Radar · 测试局负责抢速度，正式独立站负责确认确定性；真实流量结果决定下一步是否加码。</footer>
   </main>
   <div id="toast" class="toast" role="status"></div>
-  <script type="module" src="/app.js?v=12"></script>
+  <script type="module" src="/app.js?v=13"></script>
 </body>
 </html>
