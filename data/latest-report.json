@@ -1,16 +1,16 @@
 {
-  "scannedAt": "2026-09-08T08:15:31.665Z",
+  "scannedAt": "2026-09-08T08:39:14.218Z",
   "targetMarket": "US_GLOBAL",
   "primaryMarket": "US",
   "referenceMarket": "WORLDWIDE",
-  "totalAdded": 50,
+  "totalAdded": 38,
   "sources": [
     {
       "ok": true,
       "sourceId": "itch-newest-web",
       "sourceName": "itch.io 最新网页游戏",
       "total": 36,
-      "added": 2
+      "added": 7
     },
     {
       "ok": true,
@@ -52,7 +52,7 @@
       "sourceId": "steam-latest-indie",
       "sourceName": "Steam 最新独立游戏",
       "total": 50,
-      "added": 0
+      "added": 1
     },
     {
       "ok": true,
@@ -79,15 +79,15 @@
       "ok": true,
       "sourceId": "poki-new",
       "sourceName": "Poki 新游戏",
-      "total": 160,
-      "added": 19
+      "total": 141,
+      "added": 0
     },
     {
       "ok": true,
       "sourceId": "y8-new",
       "sourceName": "Y8 新游戏",
       "total": 73,
-      "added": 16
+      "added": 17
     },
     {
       "ok": true,
@@ -104,56 +104,56 @@
       "added": 0
     }
   ],
-  "seoVerified": 77,
+  "seoVerified": 90,
   "seoErrors": 0,
   "fastModelVersion": 3,
-  "fastPassedCount": 229,
-  "fastWatchCount": 230,
-  "fastRejectedCount": 57,
+  "fastPassedCount": 231,
+  "fastWatchCount": 234,
+  "fastRejectedCount": 70,
   "youtubeEnabled": false,
   "youtubeConfigured": false,
   "youtubeVerified": 0,
   "youtubeErrors": 0,
-  "trendsVerified": 10,
+  "trendsVerified": 21,
   "trendErrors": 0,
   "trendBatchRan": true,
   "trendQueueSize": 0,
   "risingDiscoveryRan": false,
   "seoModelVersion": 5,
   "trendModelVersion": 4,
-  "seoPassedCount": 343,
-  "trendEligibleCount": 161,
+  "seoPassedCount": 368,
+  "trendEligibleCount": 165,
   "trendPendingCount": 80,
-  "trendValidatedCount": 276,
+  "trendValidatedCount": 293,
   "risingCount": 2,
   "globalRisingCount": 0,
   "recommendationCounts": {
     "independent": 0,
     "test-now": 0,
     "page": 0,
-    "watch": 363,
+    "watch": 374,
     "reject": 52,
-    "pending": 2585,
+    "pending": 2574,
     "error": 0
   },
   "trendProvider": "serpapi",
   "trendProviderCounts": {
-    "serpapi": 276
+    "serpapi": 293
   },
   "serpApiConfigured": true,
   "serpApiUsage": {
     "enabled": true,
     "month": "2026-09",
-    "monthUsed": 10,
+    "monthUsed": 31,
     "day": "2026-09-08",
-    "dayUsed": 10,
+    "dayUsed": 31,
     "monthlyLimit": 245,
     "dailyLimit": 245,
-    "updatedAt": "2026-09-08T08:17:41.058Z"
+    "updatedAt": "2026-09-08T08:41:57.417Z"
   },
   "apifyConfigured": false,
   "apifyAccountStatus": {
-    "checkedAt": "2026-09-08T08:15:30.594Z",
+    "checkedAt": "2026-09-08T08:39:13.288Z",
     "configured": false,
     "ok": false,
     "provider": "apify",
@@ -172,18 +172,18 @@
   "seoProvider": "serper-google-search",
   "seoProviderCounts": {
     "evidence-fallback": 110,
-    "serper+autocomplete": 311,
-    "duckduckgo+autocomplete": 96
+    "duckduckgo+autocomplete": 96,
+    "serper+autocomplete": 330
   },
   "serperConfigured": true,
   "serperUsage": {
     "enabled": true,
-    "totalUsed": 77,
+    "totalUsed": 167,
     "day": "2026-09-08",
-    "dayUsed": 77,
+    "dayUsed": 167,
     "totalLimit": 2450,
     "dailyLimit": 2450,
-    "updatedAt": "2026-09-08T08:17:01.239Z",
+    "updatedAt": "2026-09-08T08:40:46.937Z",
     "lastError": null
   },
   "googleCseConfiguredSlots": 0,
@@ -202,16 +202,16 @@
   },
   "siteTypeModelVersion": 2,
   "siteTypeCounts": {
-    "online": 2546,
-    "wiki": 39,
-    "pending": 415
+    "online": 2508,
+    "wiki": 73,
+    "pending": 419
   },
   "wikiPrelaunchModelVersion": 2,
   "wikiPrelaunchCounts": {
     "priority": 0,
     "prepare": 1,
     "watch": 1,
-    "weak": 37
+    "weak": 71
   },
   "serperVerification": {
     "rushMode": true,
@@ -224,100 +224,113 @@
     "limit": 90,
     "onlineLimit": 63,
     "wikiLimit": 27,
-    "queueSize": 77,
-    "verified": 77,
+    "queueSize": 90,
+    "verified": 90,
     "verifiedByChannel": {
       "online": 63,
-      "wiki": 14,
+      "wiki": 27,
       "pending": 0
     },
     "errors": 0,
     "quotaStopped": false,
     "verifiedNames": [
-      "About Time!",
-      "Planet Merge",
-      "Compromised Anatomy",
-      "Basic Incremental Miner",
-      "Cogwork Carnival",
-      "HorsePower Plant",
-      "First Laser Light",
-      "Intergalactic Comet Rail Project",
-      "Midnight Oil",
-      "FragMiner - DEMO",
-      "drift1k",
-      "Minimis",
-      "Think Up House",
-      "Magnetic Catch - Demo",
-      "Sepsis 1K",
-      "Aether Run",
-      "Neon Platformer",
-      "Gut Feeling Demo",
-      "Circle Dodge",
-      "Slice Fruit Incremental",
-      "ÈRES - La guerre des âges",
-      "Radio racer",
-      "Modlu Oyun",
-      "Office Panic",
-      "Crônicas da Bíblia | Bible Chronicles",
-      "Sudoku District — Sandwich Sudoku",
-      "Splashing Boiling Water onto dogs",
-      "Pilgrims' Temple",
-      "One-Prompt Zelda Imitation",
-      "MYSELF, ANOTHER",
-      "POP CASCADE",
-      "Zoo Quacke",
-      "Poems aren't stories.",
-      "Sokoban-BoxBound",
-      "OMEGA VERITY FIGHT",
-      "Project ArcMasters",
-      "JUST HATE THAT",
-      "Call Center Manager",
-      "Gatrópolis",
-      "Naves vs Asteroides",
-      "One duck too many demo",
-      "ANGRY POISON",
-      "Interactive: Scrolling Backgrounds",
-      "Interactive: Event Sheets",
-      "Interactive: Hitboxes",
-      "Interactive: Image Points",
-      "Letra Morta",
-      "River Raider Dimensions",
-      "BIRD's VIEW",
-      "Neon Story",
-      "RootTop Demo",
-      "Thimble & Twine Prototype",
-      "Demon Rabbit's Army",
-      "Balloon Pop!",
-      "Shift At Midnight",
-      "Endacopia",
-      "Big Walk",
-      "Duskfade",
-      "dear passengers",
-      "Denshattack!",
-      "Domino Peak",
-      "Paint or Seek",
-      "Word Solitaire",
-      "Web Shot: Spider Superhero",
-      "Color Clash",
-      "Fruit Merge",
-      "Barah Gashta",
-      "Brainrot Chase Hide N Seek",
-      "Zumble Story",
-      "IDLE_DIRECTIVE",
-      "Assassin's Creed Black Flag Resynced",
-      "Scrap Mechanic",
-      "The Mound: Omen of Cthulhu",
-      "Phantom Blade Zero",
-      "Shards of Order",
-      "Tied to the Beat",
-      "Rubinite"
+      "Withering Realms",
+      "Worming from Home",
+      "Fracture Point",
+      "Dungeon Settlers",
+      "NBA 2K27",
+      "Scarlet Skips",
+      "Big Ambitions",
+      "Fell & Sell",
+      "Combolands: Roguelike Citybuilder",
+      "Mortal Shell II",
+      "Project P.I.T.T.",
+      "Sort Them Ducks",
+      "Pax Autocratica",
+      "Sovereign Tower",
+      "ReStory: Chill Electronics Repairs",
+      "Leafy Corner",
+      "How Many Dudes?",
+      "Resonance: A Plague Tale Legacy",
+      "EA SPORTS™ Madden NFL 27",
+      "Scavland",
+      "Megastore: Tidy Up Together",
+      "BOMBANANA!",
+      "WheelMates",
+      "VHOLUME",
+      "Gallipoli",
+      "Sandustry",
+      "Stonewards",
+      "Slap it",
+      "Signal Workshop — Demo",
+      "Nullscape juggling",
+      "Neon Breakout",
+      "Escapa del fango",
+      "Dangan Danjon — 弾丸ダンジョン",
+      "Blobins journey",
+      "RED NIGHT",
+      "Cardy Win",
+      "Fango Unchained",
+      "Last Villager",
+      "'Pivot' - Cozy Lawncare",
+      "DICTATOR OR TECH BRO?",
+      "BUGA DASH",
+      "Dodo Bonk",
+      "CANOPY: Rainforest Pulse",
+      "Lava Rising",
+      "Bramble Brine",
+      "Atomic Cube",
+      "El Perdón",
+      "By Touch · На ощупь",
+      "猛男青蛙的自我养成 | Muscle Frog: Forest Quest",
+      "Sketchy Snake",
+      "Mountain Rock",
+      "Stumpy's Summit",
+      "Sub-System/Zero",
+      "Paradoxo_Mobile",
+      "Craft Magic World Escape",
+      "Theme Word Search",
+      "Paradise Journey Match3",
+      "Gun Merge: Mr. Bullet",
+      "Brickstorm",
+      "Wordvine",
+      "BLOCK RUSH",
+      "Merge the Presidents",
+      "Smashing Bottles",
+      "Jeff's Cosmic Brew",
+      "Rust & Shine",
+      "Metrocity Escape Prototype",
+      "Beacon Outpost",
+      "IncreTop",
+      "That Time I Reincarnated as a Tyrant God",
+      "Neon Pong",
+      "Goods Master",
+      "Dwarf Mine",
+      "Little Troubles in Spooky Town",
+      "The Snake That Eats Puzzle Game Mechanics",
+      "Long Dives",
+      "Graveyard Orbit",
+      "NEON SURGE",
+      "Path of the idle cultivator",
+      "Something Strange",
+      "Chaotic Pets",
+      "dead_center",
+      "Green Friends",
+      "BREAKAWAY - Incremental Cycling",
+      "Backstage — Nightclub Tycoon",
+      "Six is Devil",
+      "Eleven Thousand: Deep",
+      "Eternal Fortress",
+      "Industrial Knowledge",
+      "Scratch It! Lucky Cards",
+      "Click Cafe"
     ],
-    "ranAt": "2026-09-08T08:17:01.373Z"
+    "ranAt": "2026-09-08T08:40:47.062Z"
   },
   "evidenceSeoFallback": {
     "enabled": true,
     "limit": 180,
-    "pendingCount": 2484,
+    "pendingCount": 2465,
     "eligibleCount": 0,
     "queueSize": 0,
     "verified": 0,
@@ -334,7 +347,7 @@
       "pending": 0
     },
     "verifiedNames": [],
-    "ranAt": "2026-09-08T08:17:02.015Z"
+    "ranAt": "2026-09-08T08:40:47.706Z"
   },
   "socialBuzzVerification": {
     "modelVersion": 3,
@@ -356,16 +369,16 @@
       "x": 0,
       "tiktok": 0
     },
-    "ranAt": "2026-09-08T08:17:02.999Z"
+    "ranAt": "2026-09-08T08:40:48.665Z"
   },
   "serpApiAccountStatus": {
-    "checkedAt": "2026-09-08T08:17:03.166Z",
+    "checkedAt": "2026-09-08T08:40:48.912Z",
     "accountApiConsumesSearchCredits": false,
     "configuredKeys": 1,
     "workingKeys": 1,
     "uniqueAccountCount": 1,
     "duplicateKeyGroups": [],
-    "totalIndependentSearchesLeft": 250,
+    "totalIndependentSearchesLeft": 240,
     "accounts": [
       {
         "accountFingerprint": "c5b3eac27a7b",
@@ -374,8 +387,8 @@
         ],
         "planName": "Free Plan",
         "searchesPerMonth": 250,
-        "thisMonthUsage": 0,
-        "totalSearchesLeft": 250,
+        "thisMonthUsage": 10,
+        "totalSearchesLeft": 240,
         "renewalDate": "2026-10-08"
       }
     ],
@@ -392,11 +405,11 @@
         "planMonthlyPrice": 0,
         "renewalDate": "2026-10-08",
         "searchesPerMonth": 250,
-        "thisMonthUsage": 0,
-        "planSearchesLeft": 250,
-        "totalSearchesLeft": 250,
+        "thisMonthUsage": 10,
+        "planSearchesLeft": 240,
+        "totalSearchesLeft": 240,
         "rateLimitPerHour": 250,
-        "checkedAt": "2026-09-08T08:17:03.165Z",
+        "checkedAt": "2026-09-08T08:40:48.912Z",
         "sharedAccount": false,
         "sharedWithSlots": []
       },
@@ -432,12 +445,12 @@
   },
   "channelOpportunityCounts": {
     "online": {
-      "validated": 239,
+      "validated": 248,
       "rising": 1,
       "recommended": 0
     },
     "wiki": {
-      "validated": 36,
+      "validated": 44,
       "rising": 0,
       "recommended": 0
     },
@@ -450,19 +463,19 @@
   "serpApiQuotaFill": {
     "enabled": true,
     "configuredSlots": 1,
-    "remainingAtStart": 245,
-    "queueSize": 10,
-    "verified": 10,
+    "remainingAtStart": 235,
+    "queueSize": 21,
+    "verified": 21,
     "errors": 0,
     "quotaStopped": false,
     "tierCounts": {
       "strong": 7,
-      "secondary": 3,
-      "strategic": 0
+      "secondary": 6,
+      "strategic": 8
     },
     "channelVerified": {
-      "online": 8,
-      "wiki": 2,
+      "online": 10,
+      "wiki": 11,
       "pending": 0
     },
     "pendingByTier": {
@@ -475,16 +488,27 @@
       "wiki": 0
     },
     "verifiedNames": [
-      "Domino Peak",
-      "Brainrot Chase Hide N Seek",
-      "Paint or Seek",
-      "Barah Gashta",
-      "Planet Merge",
-      "Phantom Blade Zero",
-      "drift1k",
-      "Neon Platformer",
-      "Alchemy Factory",
-      "Balloon Pop!"
+      "Theme Word Search",
+      "Gun Merge: Mr. Bullet",
+      "Craft Magic World Escape",
+      "Little Troubles in Spooky Town",
+      "IncreTop",
+      "Metrocity Escape Prototype",
+      "Rust & Shine",
+      "Path of the idle cultivator",
+      "The Snake That Eats Puzzle Game Mechanics",
+      "Slap it",
+      "Sovereign Tower",
+      "Dungeon Settlers",
+      "Big Ambitions",
+      "Leafy Corner",
+      "Scarlet Skips",
+      "WheelMates",
+      "Worming from Home",
+      "Pax Autocratica",
+      "Sandustry",
+      "VHOLUME",
+      "Mortal Shell II"
     ],
     "caps": {
       "online": 999,
@@ -497,39 +521,39 @@
         "envName": "SERPAPI_API_KEY",
         "ok": true,
         "error": null,
-        "verified": 10,
+        "verified": 21,
         "channelVerified": {
-          "online": 8,
-          "wiki": 2,
+          "online": 10,
+          "wiki": 11,
           "pending": 0
         },
         "errors": 0,
         "quotaStopped": false
       }
     },
-    "ranAt": "2026-09-08T08:17:43.946Z"
+    "ranAt": "2026-09-08T08:41:58.921Z"
   },
   "serpApiConfiguredSlots": 1,
   "serpApiPoolUsage": {
     "enabled": true,
     "configuredSlots": 1,
     "month": "2026-09",
-    "monthUsed": 10,
+    "monthUsed": 31,
     "day": "2026-09-08",
-    "dayUsed": 10,
+    "dayUsed": 31,
     "monthlyLimit": 245,
     "dailyLimit": 245,
     "accounts": {
       "1": {
         "envName": "SERPAPI_API_KEY",
-        "monthUsed": 10,
-        "dayUsed": 10,
+        "monthUsed": 31,
+        "dayUsed": 31,
         "monthlyLimit": 245,
         "dailyLimit": 245,
-        "updatedAt": "2026-09-08T08:17:41.058Z"
+        "updatedAt": "2026-09-08T08:41:57.417Z"
       }
     },
-    "updatedAt": "2026-09-08T08:17:43.991Z"
+    "updatedAt": "2026-09-08T08:41:58.970Z"
   },
   "searchApiConfigured": false,
   "searchApiTrendsUsage": {
@@ -572,6 +596,6 @@
     },
     "verifiedNames": [],
     "errorNames": [],
-    "ranAt": "2026-09-08T08:17:44.502Z"
+    "ranAt": "2026-09-08T08:41:59.473Z"
   }
 }
