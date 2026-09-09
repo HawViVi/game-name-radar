@@ -597,5 +597,16 @@
     "verifiedNames": [],
     "errorNames": [],
     "ranAt": "2026-09-08T08:41:59.473Z"
+  },
+  "todayReview": {
+    "modelVersion": 1,
+    "selectedCount": 9,
+    "candidateCount": 218,
+    "laneCounts": {
+      "confirmed-acceleration": 3,
+      "fresh-platform-growth": 6,
+      "roblox-growth": 0
+    },
+    "generatedAt": "2026-09-09T01:59:42.555Z"
   }
 }

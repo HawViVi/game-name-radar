@@ -6,7 +6,7 @@
   <meta name="description" content="发现正在形成的游戏搜索机会，并区分“30%测试局”和“证据完整的正式独立站”。" />
   <meta name="theme-color" content="#080b12" />
   <title>Game Name Radar · 游戏SEO测试局雷达</title>
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/styles.css?v=2" />
 </head>
 <body>
   <main class="page">
@@ -21,6 +21,7 @@
     <section class="stats" aria-label="筛选统计">
       <article><span>监控入口</span><strong id="sourceCount">0</strong><small>榜单、RSS、Steam、趋势等</small></article>
       <article><span>本轮新发现</span><strong id="newCount">0</strong><small>仅代表首次抓到，不代表新词</small></article>
+      <article id="todayReviewCard" class="today-review-card" role="button" tabindex="0" aria-controls="resultsSection"><span>今日人工复核</span><strong id="todayReviewCount">0</strong><small>每天精选 5–15 个最值得人工检查的新词</small></article>
       <article id="onlineRisingCard" class="accent trend-card" role="button" tabindex="0" aria-controls="resultsSection"><span>在线上涨观察</span><strong id="onlineCount">0</strong><small id="onlineRisingNames" class="trend-names">暂无上涨词</small><small>上涨词中仍需排除老词与占位站</small></article>
       <article id="wikiRisingCard" class="trend-card" role="button" tabindex="0" aria-controls="resultsSection"><span>Wiki上涨观察</span><strong id="wikiCount">0</strong><small id="wikiRisingNames" class="trend-names">暂无上涨词</small><small>已有专站时不再算新词机会</small></article>
     </section>
@@ -30,11 +31,11 @@
     </section>
     <section id="resultsSection" class="results">
       <div class="section-title">
-        <div><p class="eyebrow">ACTIONABLE OPPORTUNITIES</p><h2>现在值得测试的游戏词</h2><p>默认展示两类可行动结果：<strong>test-now</strong> 用30%成本先测真实水花；<strong>independent</strong> 代表证据已经完整，可以正式加码。</p></div>
+        <div><p class="eyebrow">ACTIONABLE OPPORTUNITIES</p><h2 id="resultsTitle">今日人工复核</h2><p id="resultsDescription">默认展示今天最值得人工检查的早期机会；它不等于建站批准，也不会降低现有推荐标准。</p></div>
         <div class="filters">
           <input id="searchInput" type="search" placeholder="搜索游戏名或来源" />
           <select id="siteTypeFilter"><option value="all">全部建站类型</option><option value="online">在线游戏型</option><option value="wiki">Wiki攻略型</option><option value="pending">类型待确认</option></select>
-          <select id="recommendationFilter"><option value="recommended" selected>可立即行动（测试局+正式站）</option><option value="trend-rising">全部上涨观察词（含老词）</option><option value="fast-pass">快速层通过</option><option value="trend-pending">等待Trends验证</option><option value="test-now">30%测试局·现在就测</option><option value="independent">证据完整·正式独立站</option><option value="page">稳定需求·仅适合站内页</option><option value="watch">继续观察／已有竞争</option><option value="reject">不建议做</option><option value="pending">全部等待验证</option><option value="all">全部状态</option></select>
+          <select id="recommendationFilter"><option value="today-review" selected>今日人工复核</option><option value="recommended">可立即行动（测试局+正式站）</option><option value="trend-rising">全部上涨观察词（含老词）</option><option value="fast-pass">快速层通过</option><option value="trend-pending">等待Trends验证</option><option value="test-now">30%测试局·现在就测</option><option value="independent">证据完整·正式独立站</option><option value="page">稳定需求·仅适合站内页</option><option value="watch">继续观察／已有竞争</option><option value="reject">不建议做</option><option value="pending">全部等待验证</option><option value="all">全部状态</option></select>
           <select id="timeFilter"><option value="all">全部时间</option><option value="1">最近24小时</option><option value="7">最近7天</option><option value="30">最近30天</option></select>
           <button id="exportBtn" class="button">导出 CSV</button>
         </div>
@@ -44,6 +45,6 @@
     <footer>Game Name Radar · 测试局负责抢速度，正式独立站负责确认确定性；真实流量结果决定下一步是否加码。</footer>
   </main>
   <div id="toast" class="toast" role="status"></div>
-  <script type="module" src="/app.js?v=13"></script>
+  <script type="module" src="/app.js?v=14"></script>
 </body>
 </html>

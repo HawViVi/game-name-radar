@@ -438,6 +438,32 @@
         "validationTier": "strong",
         "validationChannel": "online",
         "validationReason": "在线平台证据与快速热度均通过"
+      },
+      "todayReview": {
+        "selected": true,
+        "rank": 1,
+        "score": 62,
+        "lane": "confirmed-acceleration",
+        "components": {
+          "freshness": 0,
+          "growth": 73,
+          "trends": 100,
+          "searchFormation": 100,
+          "competition": 55
+        },
+        "reasons": [
+          "Fast Pass",
+          "Trends Breakout",
+          "搜索需求已形成",
+          "已覆盖2个独立平台"
+        ],
+        "warnings": [
+          "SEO仅有平台证据，仍需真实SERP复核",
+          "SERP竞争未知",
+          "内容长尾不足",
+          "首次发现已超过7天",
+          "社媒Provider异常，不影响人工复核"
+        ]
       }
     },
     {
@@ -1333,6 +1359,32 @@
         "checkedAt": "2026-09-08T06:32:30.765Z",
         "status": "error",
         "error": "YouTube search returned 403"
+      },
+      "todayReview": {
+        "selected": true,
+        "rank": 2,
+        "score": 60,
+        "lane": "fresh-platform-growth",
+        "components": {
+          "freshness": 85,
+          "growth": 86,
+          "trends": 0,
+          "searchFormation": 62,
+          "competition": 55
+        },
+        "reasons": [
+          "Fast Pass",
+          "搜索需求已形成",
+          "首次发现不足3天",
+          "24小时新增2个平台来源",
+          "已覆盖2个独立平台"
+        ],
+        "warnings": [
+          "SEO仅有平台证据，仍需真实SERP复核",
+          "SERP竞争未知",
+          "内容长尾不足",
+          "社媒Provider异常，不影响人工复核"
+        ]
       }
     },
     {
@@ -1753,6 +1805,28 @@
         "validationTier": "secondary",
         "validationChannel": "online",
         "validationReason": "在线搜索意图通过，已有浏览器游戏平台信号"
+      },
+      "todayReview": {
+        "selected": true,
+        "rank": 5,
+        "score": 55,
+        "lane": "confirmed-acceleration",
+        "components": {
+          "freshness": 85,
+          "growth": 40,
+          "trends": 60,
+          "searchFormation": 55,
+          "competition": 20
+        },
+        "reasons": [
+          "Trends需求开始形成",
+          "搜索需求已形成",
+          "首次发现不足3天"
+        ],
+        "warnings": [
+          "已有早期内容竞争",
+          "社媒尚未验证，不影响人工复核"
+        ]
       }
     },
     {
@@ -2620,6 +2694,29 @@
         "validationTier": "strong",
         "validationChannel": "online",
         "validationReason": "在线平台证据与快速热度均通过"
+      },
+      "todayReview": {
+        "selected": true,
+        "rank": 3,
+        "score": 58,
+        "lane": "fresh-platform-growth",
+        "components": {
+          "freshness": 85,
+          "growth": 63,
+          "trends": 25,
+          "searchFormation": 54,
+          "competition": 55
+        },
+        "reasons": [
+          "Fast Pass",
+          "首次发现不足3天",
+          "48小时新增2个平台来源",
+          "已覆盖2个独立平台"
+        ],
+        "warnings": [
+          "SERP竞争未知",
+          "社媒尚未验证，不影响人工复核"
+        ]
       }
     },
     {
@@ -8661,6 +8758,32 @@
         "checkedAt": "2026-09-04T17:08:52.649Z",
         "status": "error",
         "error": "YouTube search returned 403"
+      },
+      "todayReview": {
+        "selected": true,
+        "rank": 8,
+        "score": 55,
+        "lane": "fresh-platform-growth",
+        "components": {
+          "freshness": 65,
+          "growth": 66,
+          "trends": 25,
+          "searchFormation": 62,
+          "competition": 55
+        },
+        "reasons": [
+          "Fast Pass",
+          "搜索需求已形成",
+          "首次发现不足7天",
+          "已覆盖2个独立平台",
+          "榜单较上轮上升5位"
+        ],
+        "warnings": [
+          "SEO仅有平台证据，仍需真实SERP复核",
+          "SERP竞争未知",
+          "内容长尾不足",
+          "社媒Provider异常，不影响人工复核"
+        ]
       }
     },
     {
@@ -15934,6 +16057,31 @@
         "checkedAt": "2026-09-08T06:32:29.126Z",
         "status": "error",
         "error": "YouTube search returned 403"
+      },
+      "todayReview": {
+        "selected": true,
+        "rank": 4,
+        "score": 56,
+        "lane": "fresh-platform-growth",
+        "components": {
+          "freshness": 65,
+          "growth": 90,
+          "trends": 0,
+          "searchFormation": 62,
+          "competition": 55
+        },
+        "reasons": [
+          "Fast Pass",
+          "搜索需求已形成",
+          "首次发现不足7天",
+          "已覆盖3个独立平台"
+        ],
+        "warnings": [
+          "SEO仅有平台证据，仍需真实SERP复核",
+          "SERP竞争未知",
+          "内容长尾不足",
+          "社媒Provider异常，不影响人工复核"
+        ]
       }
     },
     {
@@ -19341,6 +19489,31 @@
         "checkedAt": "2026-09-07T12:30:34.785Z",
         "status": "error",
         "error": "YouTube search returned 403"
+      },
+      "todayReview": {
+        "selected": true,
+        "rank": 6,
+        "score": 55,
+        "lane": "fresh-platform-growth",
+        "components": {
+          "freshness": 65,
+          "growth": 64,
+          "trends": 25,
+          "searchFormation": 62,
+          "competition": 55
+        },
+        "reasons": [
+          "Fast Pass",
+          "搜索需求已形成",
+          "首次发现不足7天",
+          "已覆盖2个独立平台"
+        ],
+        "warnings": [
+          "SEO仅有平台证据，仍需真实SERP复核",
+          "SERP竞争未知",
+          "内容长尾不足",
+          "社媒Provider异常，不影响人工复核"
+        ]
       }
     },
     {
@@ -19732,6 +19905,31 @@
         "checkedAt": "2026-09-07T01:00:40.307Z",
         "status": "error",
         "error": "YouTube search returned 403"
+      },
+      "todayReview": {
+        "selected": true,
+        "rank": 7,
+        "score": 55,
+        "lane": "fresh-platform-growth",
+        "components": {
+          "freshness": 65,
+          "growth": 64,
+          "trends": 25,
+          "searchFormation": 62,
+          "competition": 55
+        },
+        "reasons": [
+          "Fast Pass",
+          "搜索需求已形成",
+          "首次发现不足7天",
+          "已覆盖2个独立平台"
+        ],
+        "warnings": [
+          "SEO仅有平台证据，仍需真实SERP复核",
+          "SERP竞争未知",
+          "内容长尾不足",
+          "社媒Provider异常，不影响人工复核"
+        ]
       }
     },
     {
@@ -127039,6 +127237,31 @@
         "validationTier": "strong",
         "validationChannel": "wiki",
         "validationReason": "Wiki搜索意图与快速内容生态均通过"
+      },
+      "todayReview": {
+        "selected": true,
+        "rank": 9,
+        "score": 55,
+        "lane": "confirmed-acceleration",
+        "components": {
+          "freshness": 35,
+          "growth": 72,
+          "trends": 55,
+          "searchFormation": 60,
+          "competition": 55
+        },
+        "reasons": [
+          "Fast Pass",
+          "来自直接 Trends Rising 来源",
+          "搜索需求已形成"
+        ],
+        "warnings": [
+          "SEO仅有平台证据，仍需真实SERP复核",
+          "SERP竞争未知",
+          "内容长尾不足",
+          "首次发现已超过7天",
+          "社媒Provider异常，不影响人工复核"
+        ]
       }
     },
     {

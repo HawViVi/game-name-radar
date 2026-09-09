@@ -3,6 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { classifySiteType, SITE_TYPE_MODEL_VERSION } from '../lib/site-type.mjs';
 import { applyFinalRecommendation } from '../lib/opportunity-finalizer.mjs';
+import { buildTodayReview } from '../lib/today-review.mjs';
 import { WIKI_PRELAUNCH_MODEL_VERSION } from '../lib/wiki-prelaunch.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -21,6 +22,21 @@ async function readJson(file, fallback) {
 
 const payload = await readJson(candidatesPath, { candidates: [] });
 const candidates = Array.isArray(payload) ? payload : payload.candidates || [];
+const todayReviewOnly = process.argv.includes('--today-review-only');
+
+if (todayReviewOnly) {
+  const recommendations = candidates.map((candidate) => candidate.recommendation);
+  const todayReview = buildTodayReview(candidates);
+  const report = await readJson(reportPath, {});
+  if (candidates.some((candidate, index) => candidate.recommendation !== recommendations[index])) {
+    throw new Error('Today Review generation unexpectedly changed recommendation');
+  }
+  await fs.writeFile(candidatesPath, JSON.stringify({ ...payload, candidates }, null, 2) + '\n');
+  await fs.writeFile(reportPath, JSON.stringify({ ...report, todayReview: todayReview.report }, null, 2) + '\n');
+  console.log(`Today Review generation complete: ${todayReview.report.selectedCount} selected from ${todayReview.report.candidateCount} eligible candidates.`);
+  process.exit(0);
+}
+
 const counts = { online: 0, wiki: 0, pending: 0 };
 const wikiPrelaunchCounts = { priority: 0, prepare: 0, watch: 0, weak: 0 };
 const trendProviderCounts = {};
@@ -44,6 +60,10 @@ for (const candidate of candidates) {
   const seoProvider = candidate.seo?.provider;
   if (seoProvider) seoProviderCounts[seoProvider] = (seoProviderCounts[seoProvider] || 0) + 1;
 }
+
+// Today Review is a read-only decision layer over finalized candidate data.
+// It deliberately does not feed back into recommendation or provider queues.
+const todayReview = buildTodayReview(candidates);
 
 await fs.writeFile(candidatesPath, JSON.stringify({ ...payload, candidates }, null, 2) + '\n');
 
@@ -117,6 +137,7 @@ await fs.writeFile(reportPath, JSON.stringify({
   wikiPrelaunchModelVersion: WIKI_PRELAUNCH_MODEL_VERSION,
   wikiPrelaunchCounts,
   recommendationCounts,
+  todayReview: todayReview.report,
 }, null, 2) + '\n');
 
 console.log(`Site type classification complete: ${counts.online} online, ${counts.wiki} wiki, ${counts.pending} pending; Steam prelaunch priority ${wikiPrelaunchCounts.priority}, prepare ${wikiPrelaunchCounts.prepare}; trend providers: ${activeTrendProvider || 'none'}.`);
