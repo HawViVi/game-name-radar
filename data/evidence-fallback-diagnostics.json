@@ -1,56 +1,53 @@
 {
-  "generatedAt": "2026-09-08T08:40:47.308Z",
+  "generatedAt": "2026-09-09T02:04:55.892Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2465,
+  "pendingSeo": 2457,
   "channelCounts": {
-    "pending": 318,
-    "online": 2136,
-    "wiki": 11
+    "pending": 324,
+    "online": 2133
   },
   "fastClassCounts": {
-    "pending:pending": 318,
-    "online:pending": 2136,
-    "wiki:pending": 11
+    "pending:pending": 324,
+    "online:pending": 2133
   },
   "strategicCounts": {
-    "pending:0": 311,
-    "online:2": 419,
-    "online:1": 1717,
-    "pending:1": 7,
-    "wiki:1": 11
+    "pending:0": 316,
+    "online:2": 412,
+    "online:1": 1721,
+    "pending:1": 8
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 2102
+      "count": 2072
     },
     {
       "id": "itch-newest-web",
-      "count": 2093
+      "count": 2061
     },
     {
       "id": "itch-new-feed",
-      "count": 2052
+      "count": 2022
     },
     {
       "id": "itch-new-popular-web",
-      "count": 395
+      "count": 416
     },
     {
       "id": "itch-popular",
-      "count": 395
+      "count": 416
     },
     {
       "id": "trends-rising-7d",
-      "count": 248
+      "count": 250
     },
     {
       "id": "trends-rising-30d",
-      "count": 155
+      "count": 159
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 114
+      "count": 113
     },
     {
       "id": "trends-rising-30d-horror-game",
@@ -58,27 +55,27 @@
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 78
+      "count": 81
     },
     {
       "id": "trends-rising-7d-itch-io",
       "count": 63
     },
     {
+      "id": "trends-rising-30d-indie-game",
+      "count": 41
+    },
+    {
       "id": "trends-rising-30d-itch-io",
       "count": 39
     },
     {
-      "id": "trends-rising-30d-indie-game",
-      "count": 37
-    },
-    {
       "id": "newgrounds-daily-top",
-      "count": 31
+      "count": 32
     },
     {
       "id": "newgrounds-top",
-      "count": 31
+      "count": 32
     },
     {
       "id": "newgrounds-latest",
@@ -89,16 +86,12 @@
       "count": 29
     },
     {
-      "id": "steam-popular-new",
-      "count": 13
-    },
-    {
       "id": "itch-featured-feed",
-      "count": 7
+      "count": 8
     },
     {
       "id": "itch-featured",
-      "count": 7
+      "count": 8
     },
     {
       "id": "y8-new",
@@ -113,6 +106,10 @@
       "count": 4
     },
     {
+      "id": "steam-popular-new",
+      "count": 2
+    },
+    {
       "id": "lagged-new",
       "count": 2
     }
@@ -120,25 +117,6 @@
   "samples": [
     {
       "name": "Dungeonbound",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 5,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Legs",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
@@ -309,25 +287,6 @@
       ]
     },
     {
-      "name": "Thock Factory",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
       "name": "The Grand Book Archive: Tidy Up",
       "channel": "online",
       "fastClass": "pending",
@@ -423,44 +382,6 @@
       ]
     },
     {
-      "name": "Thought Rot",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Incremental Bowling demo",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
       "name": "The Big Suck Demo",
       "channel": "online",
       "fastClass": "pending",
@@ -499,25 +420,6 @@
       ]
     },
     {
-      "name": "Au lait or Not",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
       "name": "TsundereSQL",
       "channel": "online",
       "fastClass": "pending",
@@ -537,44 +439,6 @@
       ]
     },
     {
-      "name": "Incremental Mines",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Color Cascade",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-popular-web",
-        "itch-popular",
-        "itch-new-feed"
-      ]
-    },
-    {
       "name": "Core!1!",
       "channel": "online",
       "fastClass": "pending",
@@ -583,25 +447,6 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 9,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Crash Miner",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
@@ -1058,6 +903,158 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 5,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Rattle Spring: Overture",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Elite Soccer Manager",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "The Challenge of Julie",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 9,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Poke the Bug",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 6,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Mercy - Prototype",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Protect The Light Machine",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 5,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Incremental Pain Profit",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Where's my red ball",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 4,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
