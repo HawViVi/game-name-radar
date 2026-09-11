@@ -107,6 +107,123 @@ test('removes stale Today Review data when a candidate is no longer selected', (
   assert.equal(item.todayReview, undefined);
 });
 
+test('existing keyword history sharply reduces freshness without changing recommendation', () => {
+  const item = candidate('Established Phrase', {
+    trend: { keywordFreshness: 'existing', classification: 'breakout' },
+    marketFreshness: { status: 'unknown', confidence: 'low', keywordFreshness: 'existing' },
+  });
+  const before = item.recommendation;
+  const evaluation = evaluateTodayReviewCandidate(item, { nowMs: NOW });
+  assert.equal(evaluation.review.components.freshness, 5);
+  assert.ok(evaluation.review.score < 55);
+  assert.equal(item.recommendation, before);
+});
+
+test('unknown keyword freshness warns but does not hard-exclude', () => {
+  const item = candidate('Unknown Freshness');
+  const evaluation = evaluateTodayReviewCandidate(item, { nowMs: NOW });
+  assert.equal(evaluation.hardExcluded, false);
+  assert.match(evaluation.review.warnings.join(' '), /关键词新鲜度未知/);
+});
+
+test('90-day established bare term loses freshness unless game-intent demand is newly forming', () => {
+  const established = candidate('Long Running Phrase', {
+    trend: {
+      keywordFreshness: 'unknown',
+      ninetyDay: { points: 93, earlierAverage: 4, earlierCoverage: 0.9 },
+      ninetyDayQualified: { earlierAverage: 0, earlierCoverage: 0, recentAverage: 0, recentCoverage: 0 },
+    },
+  });
+  const emerging = candidate('New Game Intent', {
+    trend: {
+      keywordFreshness: 'unknown',
+      ninetyDay: { points: 93, earlierAverage: 4, earlierCoverage: 0.9 },
+      ninetyDayQualified: { earlierAverage: 0, earlierCoverage: 0, recentAverage: 1, recentCoverage: 0.5 },
+    },
+  });
+  const oldEvaluation = evaluateTodayReviewCandidate(established, { nowMs: NOW });
+  const newEvaluation = evaluateTodayReviewCandidate(emerging, { nowMs: NOW });
+  assert.equal(oldEvaluation.review.components.freshness, 5);
+  assert.equal(newEvaluation.review.components.freshness, 100);
+});
+
+test('high-confidence dedicated domain and derived exact-match specialist site are excluded', () => {
+  const known = candidate('Known Site', {
+    marketFreshness: { status: 'occupied', confidence: 'high', dedicatedDomains: ['knownsite.com'] },
+  });
+  const derived = candidate('Fresh Quest', {
+    seo: { provider: 'serper+autocomplete', provisional: false, exactResultUrls: ['https://freshquestwiki.com/guide'] },
+  });
+  buildTodayReview([known, derived], { nowMs: NOW });
+  assert.equal(known.todayReview, undefined);
+  assert.equal(derived.todayReview, undefined);
+});
+
+test('ordinary game platforms are not treated as dedicated specialist sites', () => {
+  const item = candidate('Portal Game', {
+    seo: {
+      provider: 'serper+autocomplete',
+      provisional: false,
+      exactResultUrls: ['https://poki.com/en/g/portal-game', 'https://store.steampowered.com/app/123/portal_game/'],
+    },
+  });
+  const evaluation = evaluateTodayReviewCandidate(item, { nowMs: NOW });
+  assert.equal(evaluation.calibrationRisk.highConfidenceDedicated, false);
+  assert.equal(evaluation.hardExcluded, false);
+});
+
+test('multiple same-platform product entities are excluded as an entity conflict', () => {
+  const item = candidate('Shared Product Name', {
+    seo: {
+      provider: 'serper+autocomplete',
+      provisional: false,
+      exactResultUrls: [
+        'https://play.google.com/store/apps/details?id=studio.one.shared',
+        'https://play.google.com/store/apps/details?id=studio.two.shared',
+      ],
+    },
+  });
+  const evaluation = evaluateTodayReviewCandidate(item, { nowMs: NOW });
+  assert.equal(evaluation.hardExcluded, true);
+  assert.match(evaluation.exclusionReasons.join(' '), /多个游戏或商品实体/);
+});
+
+test('duplicate normalized names are excluded from the review pool', () => {
+  const first = candidate('Same Name', { id: 'entity-one', sources: [source('itch-newest-web', 'one.itch.io')] });
+  const second = candidate('Same Name', { id: 'entity-two', sources: [source('steam-popular-new', 'store.steampowered.com')] });
+  const result = buildTodayReview([first, second], { nowMs: NOW });
+  assert.equal(result.report.selectedCount, 0);
+  assert.equal(first.todayReview, undefined);
+  assert.equal(second.todayReview, undefined);
+});
+
+test('mature franchise terms are excluded by generic brand rules', () => {
+  const item = candidate('Marvel Galaxy Tactics');
+  const evaluation = evaluateTodayReviewCandidate(item, { nowMs: NOW });
+  assert.equal(evaluation.hardExcluded, true);
+  assert.match(evaluation.exclusionReasons.join(' '), /大型IP/);
+});
+
+test('mature SERP ecosystems sharply reduce competition score', () => {
+  const item = candidate('Crowded Launch', {
+    seo: {
+      provider: 'serper+autocomplete',
+      provisional: false,
+      exactResultUrls: [
+        'https://store.steampowered.com/app/1/crowded_launch/',
+        'https://www.nintendo.com/store/products/crowded-launch-switch/',
+        'https://www.xbox.com/games/store/crowded-launch/1',
+        'https://www.ign.com/games/crowded-launch',
+        'https://www.reddit.com/r/games/crowded-launch',
+        'https://www.youtube.com/watch?v=123',
+      ],
+    },
+  });
+  const evaluation = evaluateTodayReviewCandidate(item, { nowMs: NOW });
+  assert.equal(evaluation.calibrationRisk.matureEcosystem, true);
+  assert.equal(evaluation.review.components.competition, 10);
+});
+
 test('fresh growth ranks ahead of a mature high-score term', () => {
   const fresh = candidate('Fresh Growth');
   const mature = candidate('Mature Strong', {

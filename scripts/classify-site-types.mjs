@@ -26,7 +26,11 @@ const todayReviewOnly = process.argv.includes('--today-review-only');
 
 if (todayReviewOnly) {
   const recommendations = candidates.map((candidate) => candidate.recommendation);
-  const todayReview = buildTodayReview(candidates);
+  const snapshotTime = Date.parse(payload.updatedAt || '');
+  const todayReview = buildTodayReview(candidates, {
+    nowMs: Number.isFinite(snapshotTime) ? snapshotTime : Date.now(),
+    generatedAtMs: Date.now(),
+  });
   const report = await readJson(reportPath, {});
   if (candidates.some((candidate, index) => candidate.recommendation !== recommendations[index])) {
     throw new Error('Today Review generation unexpectedly changed recommendation');

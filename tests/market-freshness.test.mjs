@@ -125,8 +125,9 @@ test('allows a genuinely new online term when market and social evidence both pa
 });
 
 test('routes an unknown-history rising term to test-now instead of strict independent', () => {
+  const currentNow = Date.now();
   const candidate = baseCandidate({
-    firstSeen: '2026-08-27T08:00:00Z',
+    firstSeen: new Date(currentNow - 86400000).toISOString(),
     trend: {
       modelVersion: 4,
       classification: 'breakout',
@@ -144,7 +145,7 @@ test('routes an unknown-history rising term to test-now instead of strict indepe
     },
   });
 
-  const market = analyzeMarketFreshness(candidate, NOW);
+  const market = analyzeMarketFreshness(candidate, currentNow);
   assert.equal(market.status, 'unconfirmed-new');
   assert.equal(market.allowsIndependent, false);
 
