@@ -256,15 +256,15 @@
     "weak": 76
   },
   "todayReview": {
-    "modelVersion": 1,
+    "modelVersion": 2,
     "selectedCount": 5,
-    "candidateCount": 214,
+    "candidateCount": 206,
     "laneCounts": {
       "confirmed-acceleration": 2,
       "fresh-platform-growth": 3,
       "roblox-growth": 0
     },
-    "generatedAt": "2026-09-10T04:52:40.435Z"
+    "generatedAt": "2026-09-11T02:47:17.260Z"
   },
   "serperVerification": {
     "rushMode": true,
