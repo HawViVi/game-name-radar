@@ -1,81 +1,73 @@
 {
-  "generatedAt": "2026-09-10T04:51:51.239Z",
+  "generatedAt": "2026-09-11T02:55:00.849Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2441,
+  "pendingSeo": 2431,
   "channelCounts": {
-    "pending": 351,
-    "online": 2090
+    "pending": 371,
+    "online": 2060
   },
   "fastClassCounts": {
-    "pending:pending": 351,
-    "online:pending": 2090
+    "pending:pending": 371,
+    "online:pending": 2060
   },
   "strategicCounts": {
-    "pending:0": 340,
-    "online:2": 400,
-    "online:1": 1690,
+    "pending:0": 360,
+    "online:2": 392,
+    "online:1": 1668,
     "pending:1": 11
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 2054
+      "count": 2056
     },
     {
       "id": "itch-newest-web",
-      "count": 2019
+      "count": 2011
     },
     {
       "id": "itch-new-feed",
-      "count": 2004
+      "count": 2006
     },
     {
       "id": "itch-new-popular-web",
-      "count": 402
+      "count": 378
     },
     {
       "id": "itch-popular",
-      "count": 402
+      "count": 378
     },
     {
       "id": "trends-rising-7d",
-      "count": 251
+      "count": 260
     },
     {
       "id": "trends-rising-30d",
-      "count": 159
+      "count": 165
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 114
+      "count": 120
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 84
+      "count": 86
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 81
+      "count": 83
     },
     {
       "id": "trends-rising-7d-itch-io",
-      "count": 63
-    },
-    {
-      "id": "trends-rising-30d-indie-game",
-      "count": 40
+      "count": 64
     },
     {
       "id": "trends-rising-30d-itch-io",
-      "count": 39
+      "count": 42
     },
     {
-      "id": "newgrounds-daily-top",
-      "count": 33
-    },
-    {
-      "id": "newgrounds-top",
-      "count": 33
+      "id": "trends-rising-30d-indie-game",
+      "count": 42
     },
     {
       "id": "newgrounds-latest",
@@ -84,6 +76,14 @@
     {
       "id": "newgrounds-new",
       "count": 29
+    },
+    {
+      "id": "newgrounds-daily-top",
+      "count": 27
+    },
+    {
+      "id": "newgrounds-top",
+      "count": 27
     },
     {
       "id": "itch-featured-feed",
@@ -705,25 +705,6 @@
       ]
     },
     {
-      "name": "Elite Soccer Manager",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
       "name": "The Challenge of Julie",
       "channel": "online",
       "fastClass": "pending",
@@ -762,25 +743,6 @@
       ]
     },
     {
-      "name": "Mercy - Prototype",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
       "name": "Protect The Light Machine",
       "channel": "online",
       "fastClass": "pending",
@@ -800,25 +762,6 @@
       ]
     },
     {
-      "name": "Incremental Pain Profit",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
       "name": "Where's my red ball",
       "channel": "online",
       "fastClass": "pending",
@@ -827,63 +770,6 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 4,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Pirate Themed Fishing",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Sprunki:Colors Like you Wanted",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Fish Fishing",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
@@ -941,44 +827,6 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 9,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "ABSOLUTE HIGHLOAD",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Great March",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
@@ -1048,6 +896,158 @@
     },
     {
       "name": "DEXFUSAL",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 5,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Steal the Core",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 6,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Into the Shimmer",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 6,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Zero Pressure",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "PokéClicker: Winter Wishes",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 5,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "ValeFall",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 5,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Polícia e Ladrão",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Down To Detonate",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 6,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "microChess",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
