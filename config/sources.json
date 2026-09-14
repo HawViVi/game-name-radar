@@ -144,5 +144,25 @@
     "fetchKind": "lagged-listing",
     "enabled": true,
     "baselineOnly": false
+  },
+  {
+    "id": "roblox-top-trending",
+    "name": "Roblox Top Trending",
+    "url": "https://www.roblox.com/charts",
+    "kind": "roblox-chart",
+    "fetchKind": "roblox-charts",
+    "chartName": "Top Trending",
+    "enabled": false,
+    "baselineOnly": false
+  },
+  {
+    "id": "roblox-up-and-coming",
+    "name": "Roblox Up-and-Coming",
+    "url": "https://www.roblox.com/charts",
+    "kind": "roblox-chart",
+    "fetchKind": "roblox-charts",
+    "chartName": "Up-and-Coming",
+    "enabled": false,
+    "baselineOnly": false
   }
 ]
