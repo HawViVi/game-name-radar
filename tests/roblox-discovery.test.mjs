@@ -70,8 +70,27 @@ test('normalizes only known Roblox decorations conservatively', () => {
 test('discovers target charts by display name instead of permanent sort IDs', () => {
   const results = parseRobloxChartsPayload(chartPayload(), [TOP, UPCOMING], '2026-09-10T00:00:00Z');
   assert.deepEqual(results.map((item) => item.source.id), ['roblox-top-trending', 'roblox-up-and-coming']);
+  assert.deepEqual(results.map((item) => item.sortId), ['dynamic-991', 'dynamic-817']);
+  assert.deepEqual(results.map((item) => item.sortName), ['Top Trending', 'Up & Coming']);
   assert.equal(results[0].entries[0].universeId, '101');
   assert.equal(results[1].entries[0].rank, 12);
+});
+
+test('Canary chart parsing limits each sort before validation and enrichment', () => {
+  const games = Array.from({ length: 8 }, (_, index) => ({
+    universeId: String(100 + index),
+    name: `Game ${index}`,
+    rank: index + 1,
+    isSponsored: false,
+  }));
+  games[6].universeId = 'invalid-outside-canary-limit';
+  const results = parseRobloxChartsPayload(
+    { sorts: [{ sortId: 'limited', sortDisplayName: 'Top Trending', games }] },
+    [TOP],
+    '2026-09-10T00:00:00Z',
+    { maxEntriesPerSource: 5 },
+  );
+  assert.equal(results[0].entries.length, 5);
 });
 
 test('Charts request uses country all and computer device without a fixed sort ID', async () => {
