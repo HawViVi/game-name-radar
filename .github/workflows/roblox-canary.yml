@@ -1,0 +1,46 @@
+name: Roblox Canary
+
+on:
+  workflow_dispatch:
+    inputs:
+      phase_a_ref:
+        description: Exact feat/roblox-phase-a commit SHA to test
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  canary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out the requested Phase A commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.phase_a_ref }}
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Run read-only Roblox Canary
+        run: node scripts/roblox-canary.mjs
+
+      - name: Verify the Canary did not modify the repository
+        if: always()
+        shell: bash
+        run: |
+          status="$(git status --porcelain --untracked-files=all)"
+          printf '%s\n' "$status"
+          if [ -n "$status" ]; then
+            echo "Roblox Canary modified repository files"
+            exit 1
+          fi
