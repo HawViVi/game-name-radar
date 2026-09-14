@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { calculateSeoVerdict, cleanGameName, estimateNameRisk } from '../lib/seo-verifier.mjs';
 import { calculateFastSignals, FAST_MODEL_VERSION } from '../lib/fast-signals.mjs';
 import { SEO_MODEL_VERSION } from '../lib/trend-queue.mjs';
+import { allowsPaidRobloxVerification } from '../lib/roblox-fast-signals.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const candidatesPath=path.join(root,'data','candidates.json');
@@ -61,7 +62,7 @@ function needs(c){
   if(c.seo?.provider?.startsWith('google-cse-')){const t=Date.parse(c.seo.checkedAt||'');return !Number.isFinite(t)||Date.now()-t>3*86400000}
   return['pending','error','watch'].includes(c.seo?.classification)||['duckduckgo+autocomplete','brave+autocomplete'].includes(c.seo?.provider);
 }
-function useful(c){const risk=estimateNameRisk(c.gameName||'');if(risk>20)return false;const ks=kinds(c),strategic=[...ks].some(k=>STRATEGIC.has(k)),count=sourceCount(c),age=Date.now()-Date.parse(c.firstSeen||0),recent=Number.isFinite(age)&&age<=7*86400000;return strategic||count>=2||(recent&&Number(c.discoveryScore||0)>=4&&risk<=17)}
+function useful(c){if(!allowsPaidRobloxVerification(c))return false;const risk=estimateNameRisk(c.gameName||'');if(risk>20)return false;const ks=kinds(c),strategic=[...ks].some(k=>STRATEGIC.has(k)),count=sourceCount(c),age=Date.now()-Date.parse(c.firstSeen||0),recent=Number.isFinite(age)&&age<=7*86400000;return strategic||count>=2||(recent&&Number(c.discoveryScore||0)>=4&&risk<=17)}
 function priority(c){const ks=kinds(c),count=sourceCount(c);let s=Number(c.discoveryScore||0)*5+Math.max(0,25-estimateNameRisk(c.gameName||''))+count*10;if(ks.has('trends-rising-7d'))s+=80;if(ks.has('trends-rising-30d'))s+=60;if(ks.has('itch-featured'))s+=40;if(ks.has('itch-popular'))s+=32;if(ks.has('steam-popular-new'))s+=30;if(ks.has('newgrounds-top'))s+=22;const age=Date.now()-Date.parse(c.firstSeen||0);if(Number.isFinite(age)&&age<2*86400000)s+=25;return s}
 function refresh(c){const seo=c.seo?.classification||'pending',fast=c.fast?.classification||'pending';if(seo==='error')c.recommendation='error';else if(seo==='reject'||c.seo?.entityConflict||['reject','weak'].includes(fast))c.recommendation='reject';else if(fast==='watch')c.recommendation='watch';else if(!c.trend)c.recommendation='pending';if(['reject','pending','error'].includes(c.recommendation)){c.finalScore=0;c.score=0}c.level=c.recommendation}
 
