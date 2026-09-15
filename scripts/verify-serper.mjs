@@ -5,6 +5,7 @@ import { calculateSeoVerdict, cleanGameName, estimateNameRisk } from '../lib/seo
 import { calculateFastSignals } from '../lib/fast-signals.mjs';
 import { classifySiteType } from '../lib/site-type.mjs';
 import { SEO_MODEL_VERSION } from '../lib/trend-queue.mjs';
+import { allowsPaidRobloxVerification } from '../lib/roblox-fast-signals.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const candidatesPath = path.join(root, 'data', 'candidates.json');
@@ -94,6 +95,7 @@ function needsSeo(candidate) {
 }
 
 function isUseful(candidate) {
+  if (!allowsPaidRobloxVerification(candidate)) return false;
   const risk = estimateNameRisk(candidate.gameName || '');
   if (risk > 22) return false;
   const kinds = sourceKinds(candidate);

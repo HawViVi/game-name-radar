@@ -8,6 +8,8 @@ import { verifyGameKeyword, cleanGameName, estimateNameRisk } from '../lib/seo-v
 import { verifyTrendDemand } from '../lib/trend-verifier.mjs';
 import { calculateFastSignals, verifyYoutubeSignals, FAST_MODEL_VERSION } from '../lib/fast-signals.mjs';
 import { applyFinalRecommendation } from '../lib/opportunity-finalizer.mjs';
+import { isRobloxCandidate, runRobloxDiscoveryTransaction, scanRobloxCharts } from '../lib/roblox-discovery.mjs';
+import { allowsPaidRobloxVerification } from '../lib/roblox-fast-signals.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const sourcesPath=path.join(root,'config','sources.json');
@@ -47,7 +49,7 @@ function updateDiscovery(candidate){
 }
 
 function normalizeCandidateName(candidate){
-  const cleaned=cleanGameName(candidate.gameName||'');
+  const cleaned=isRobloxCandidate(candidate)?String(candidate.roblox?.normalizedKeyword||candidate.gameName||'').trim():cleanGameName(candidate.gameName||'');
   if(!cleaned)return false;
   const normalized=normalizeGameName(cleaned);
   if(!normalized)return false;
@@ -79,8 +81,9 @@ function dedupeCandidates(items){
   const map=new Map();
   for(const item of items){
     if(!normalizeCandidateName(item))continue;
-    const existing=map.get(item.normalizedName);
-    if(!existing){map.set(item.normalizedName,item);continue}
+    const identity=isRobloxCandidate(item)?`roblox:${String(item.roblox?.universeId||item.id).replace(/^roblox:/,'')}`:`name:${item.normalizedName}`;
+    const existing=map.get(identity);
+    if(!existing){map.set(identity,item);continue}
     const sourceKeys=new Set((existing.sources||[]).map(source=>source.key));
     for(const source of item.sources||[])if(!sourceKeys.has(source.key)){existing.sources.push(source);sourceKeys.add(source.key)}
     if(Date.parse(item.firstSeen)<Date.parse(existing.firstSeen))existing.firstSeen=item.firstSeen;
@@ -93,6 +96,7 @@ function dedupeCandidates(items){
     if(!existing.wikiPrelaunch&&item.wikiPrelaunch)existing.wikiPrelaunch=item.wikiPrelaunch;
     if(!existing.marketFreshness&&item.marketFreshness)existing.marketFreshness=item.marketFreshness;
     if(!existing.opportunity&&item.opportunity)existing.opportunity=item.opportunity;
+    if(!existing.roblox&&item.roblox)existing.roblox=item.roblox;
   }
   return [...map.values()];
 }
@@ -139,6 +143,7 @@ function needsSeoCheck(candidate){
 }
 
 function shouldAutoVerify(candidate){
+  if(!allowsPaidRobloxVerification(candidate))return false;
   const kinds=sourceKinds(candidate);
   const risk=estimateNameRisk(candidate.gameName);
   return kinds.has('trends-rising-7d')||kinds.has('trends-rising-30d')||kinds.has('steam-popular-new')||
@@ -163,6 +168,7 @@ function verifyPriority(candidate){
 
 function isFastPassed(candidate){return hasCurrentSeo(candidate)&&candidate.fast?.modelVersion===FAST_MODEL_VERSION&&candidate.fast?.classification==='pass'}
 function isTrendEligible(candidate){
+  if(!allowsPaidRobloxVerification(candidate))return false;
   if(!hasCurrentSeo(candidate))return false;
   if(!['independent','page'].includes(candidate.seo?.classification))return false;
   if(Number(candidate.seo?.score||0)<42)return false;
@@ -196,6 +202,7 @@ function trendPriority(candidate){
 }
 
 function youtubeNeedsCheck(candidate){
+  if(isRobloxCandidate(candidate))return false;
   if(!YOUTUBE_API_KEY||YOUTUBE_LIMIT<=0||!hasCurrentSeo(candidate))return false;
   if(!['independent','page'].includes(candidate.seo?.classification))return false;
   if(!['pass','watch'].includes(candidate.fast?.classification))return false;
@@ -222,7 +229,9 @@ async function processSourceResult({source,result,candidates,radarState,logs,now
   return added;
 }
 
-const sources=(await readJson(sourcesPath,[])).filter(source=>source.enabled!==false);
+const allSources=await readJson(sourcesPath,[]);
+const robloxSourceConfigs=allSources.filter(source=>source.fetchKind==='roblox-charts');
+const sources=allSources.filter(source=>source.enabled!==false&&source.fetchKind!=='roblox-charts');
 const radarState=await readJson(statePath,{snapshots:{},lastScan:null,lastRisingDiscovery:null,lastTrendBatch:null});
 const candidatePayload=await readJson(candidatesPath,{candidates:[]});
 let candidates=dedupeCandidates(Array.isArray(candidatePayload)?candidatePayload:candidatePayload.candidates||[]);
@@ -230,6 +239,40 @@ const previousFastById=new Map(candidates.map(candidate=>[candidate.id,candidate
 const now=new Date().toISOString();
 const logs=[];
 let totalAdded=0;
+
+const robloxScan=await scanRobloxCharts(robloxSourceConfigs);
+let robloxDiscovery={
+  configured:robloxScan.configured,
+  ran:robloxScan.ran,
+  success:robloxScan.success,
+  chartSources:robloxScan.chartSources,
+  universesFound:0,
+  newUniverses:0,
+  updatedUniverses:0,
+  errors:[...(robloxScan.errors||[])],
+  generatedAt:robloxScan.generatedAt,
+};
+if(robloxScan.success){
+  const existingUniverses=new Set(candidates.filter(isRobloxCandidate).map(candidate=>String(candidate.roblox?.universeId||candidate.id).replace(/^roblox:/,'')));
+  try{
+    const transaction=await runRobloxDiscoveryTransaction({candidates,state:radarState,sourceResults:robloxScan.sourceResults,now});
+    robloxDiscovery={...robloxDiscovery,...transaction,errors:[...robloxDiscovery.errors,...transaction.errors]};
+    if(transaction.success){
+      totalAdded+=transaction.newUniverses;
+      for(const result of robloxScan.sourceResults){
+        const added=new Set(result.entries.filter(entry=>!existingUniverses.has(String(entry.universeId))).map(entry=>String(entry.universeId))).size;
+        logs.push({ok:true,sourceId:result.source.id,sourceName:result.source.name,total:result.entries.length,added});
+      }
+    }else{
+      for(const sourceId of robloxScan.chartSources)logs.push({ok:false,sourceId,error:'Roblox enrichment failed; previous candidates and snapshots were preserved'});
+    }
+  }catch(error){
+    robloxDiscovery={...robloxDiscovery,success:false,errors:[...robloxDiscovery.errors,{message:error.message}]};
+    for(const sourceId of robloxScan.chartSources)logs.push({ok:false,sourceId,error:'Roblox discovery merge failed; previous candidates and snapshots were preserved'});
+  }
+}else if(robloxScan.ran){
+  for(const sourceId of robloxScan.chartSources)logs.push({ok:false,sourceId,error:'Roblox discovery failed; previous candidates and snapshots were preserved'});
+}
 
 for(const source of sources){
   try{
@@ -271,7 +314,8 @@ for(const candidate of verifyQueue){
 
 for(const candidate of candidates){
   if(!candidate.seo)candidate.seo={modelVersion:SEO_MODEL_VERSION,status:'pending',classification:'pending',score:0,reasons:['等待自动搜索意图验证']};
-  if(hasCurrentSeo(candidate)&&['independent','page','reject','watch'].includes(candidate.seo.classification))candidate.fast=calculateFastSignals(candidate,previousFastById.get(candidate.id)||{});
+  if(isRobloxCandidate(candidate))candidate.fast=calculateFastSignals(candidate,previousFastById.get(candidate.id)||{});
+  else if(hasCurrentSeo(candidate)&&['independent','page','reject','watch'].includes(candidate.seo.classification))candidate.fast=calculateFastSignals(candidate,previousFastById.get(candidate.id)||{});
   else candidate.fast={modelVersion:FAST_MODEL_VERSION,status:'pending',classification:'pending',score:0,reasons:['等待最新SEO验证后计算快速热度']};
 }
 
@@ -332,5 +376,5 @@ const globalRisingCount=candidates.filter(candidate=>['rising','breakout'].inclu
 radarState.lastScan=now;
 await fs.writeFile(statePath,JSON.stringify(radarState,null,2)+'\n');
 await fs.writeFile(candidatesPath,JSON.stringify({updatedAt:now,candidates},null,2)+'\n');
-await fs.writeFile(reportPath,JSON.stringify({scannedAt:now,targetMarket:TARGET_MARKET,primaryMarket:'US',referenceMarket:'WORLDWIDE',totalAdded,sources:logs,seoVerified,seoErrors,fastModelVersion:FAST_MODEL_VERSION,fastPassedCount,fastWatchCount,fastRejectedCount,youtubeEnabled:Boolean(YOUTUBE_API_KEY),youtubeConfigured:Boolean(YOUTUBE_API_KEY),youtubeVerified,youtubeErrors,trendsVerified,trendErrors,trendBatchRan,trendQueueSize,risingDiscoveryRan,seoModelVersion:SEO_MODEL_VERSION,trendModelVersion:TREND_MODEL_VERSION,seoPassedCount,trendEligibleCount,trendPendingCount,trendValidatedCount,risingCount,globalRisingCount,recommendationCounts},null,2)+'\n');
+await fs.writeFile(reportPath,JSON.stringify({scannedAt:now,targetMarket:TARGET_MARKET,primaryMarket:'US',referenceMarket:'WORLDWIDE',totalAdded,sources:logs,robloxDiscovery,seoVerified,seoErrors,fastModelVersion:FAST_MODEL_VERSION,fastPassedCount,fastWatchCount,fastRejectedCount,youtubeEnabled:Boolean(YOUTUBE_API_KEY),youtubeConfigured:Boolean(YOUTUBE_API_KEY),youtubeVerified,youtubeErrors,trendsVerified,trendErrors,trendBatchRan,trendQueueSize,risingDiscoveryRan,seoModelVersion:SEO_MODEL_VERSION,trendModelVersion:TREND_MODEL_VERSION,seoPassedCount,trendEligibleCount,trendPendingCount,trendValidatedCount,risingCount,globalRisingCount,recommendationCounts},null,2)+'\n');
 console.log(`Scan complete. Market ${TARGET_MARKET}; YouTube ${YOUTUBE_API_KEY?'enabled':'disabled'}; ${totalAdded} names added; ${seoVerified} SEO checks; ${fastPassedCount} fast-pass; ${trendsVerified} Trends checks; ${trendPendingCount} trend candidates pending.`);
