@@ -22,7 +22,7 @@ function prelaunchCandidate(overrides = {}) {
       sourceId: 'steam-top-wishlist',
       kind: 'steam-top-wishlist',
       url: 'https://store.steampowered.com/app/123/project_emberfall/',
-      date: 'Sep 12, 2026',
+      date: 'Sep 12, 2099',
       firstSeen: '2026-08-02T02:00:00Z',
       previousRank: 32,
       currentRank: 18,
