@@ -4,6 +4,7 @@ import fs from 'node:fs/promises';
 import {
   calculateRobloxGrowth,
   buildValidatedRobloxBatch,
+  buildRobloxTransientCandidate,
   compactRobloxSnapshots,
   fetchWithTimeout,
   fetchRobloxGameMetadata,
@@ -11,13 +12,26 @@ import {
   mergeRobloxDiscovery,
   normalizeRobloxTitle,
   parseRobloxChartsPayload,
+  pruneRobloxObservationPool,
   RobloxSchemaValidationError,
   runRobloxDiscoveryTransaction,
   scanRobloxCharts,
 } from '../lib/roblox-discovery.mjs';
+import { calculateFastSignals } from '../lib/fast-signals.mjs';
+import { allowsPaidRobloxVerification } from '../lib/roblox-fast-signals.mjs';
+import { buildTodayReview } from '../lib/today-review.mjs';
 
 const TOP = { id: 'roblox-top-trending', name: 'Roblox Top Trending', kind: 'roblox-chart', fetchKind: 'roblox-charts', chartName: 'Top Trending', enabled: true };
 const UPCOMING = { id: 'roblox-up-and-coming', name: 'Roblox Up-and-Coming', kind: 'roblox-chart', fetchKind: 'roblox-charts', chartName: 'Up-and-Coming', enabled: true };
+const fastResult = (classification, overrides = {}) => () => ({
+  modelVersion: 3,
+  profile: 'roblox',
+  classification,
+  score: classification === 'pass' ? 60 : classification === 'watch' ? 40 : 20,
+  strongGrowth: false,
+  ...overrides,
+});
+const realFast = (candidate, nowMs) => calculateFastSignals(candidate, {}, nowMs);
 
 function response(status, payload, headers = {}) {
   return { ok: status >= 200 && status < 300, status, headers: { get: (name) => headers[name.toLowerCase()] || null }, json: async () => payload };
@@ -244,7 +258,7 @@ test('invalid rank cannot become natural chart growth evidence', () => {
   assert.deepEqual(result[0].validationErrors.map((error) => error.code), ['INVALID_RANK']);
   const candidates = [];
   const state = {};
-  mergeRobloxDiscovery({ candidates, state, sourceResults: result, metadataByUniverse: new Map([['101', { ...gameRow('101'), universeId: '101', originalName: 'Rankless Game', favorites: 900, createdAt: '2026-09-01T00:00:00Z', updatedAt: '2026-09-10T00:00:00Z' }]]), now: '2026-09-10T00:00:00Z' });
+  mergeRobloxDiscovery({ candidates, state, sourceResults: result, metadataByUniverse: new Map([['101', { ...gameRow('101'), universeId: '101', originalName: 'Rankless Game', favorites: 900, createdAt: '2026-09-01T00:00:00Z', updatedAt: '2026-09-10T00:00:00Z' }]]), now: '2026-09-10T00:00:00Z', evaluateFast: fastResult('pass') });
   assert.equal(candidates[0].roblox.latestGrowth.chartSourceCount, 0);
   assert.equal(candidates[0].roblox.rankings['roblox-top-trending'].currentRank, null);
   assert.equal(candidates[0].sources[0].currentRank, null);
@@ -256,7 +270,7 @@ test('missing sponsored field becomes unknown and cannot count as natural chart 
   assert.equal(result[0].validationErrors[0].code, 'UNKNOWN_SPONSORED_STATUS');
   const candidates = [];
   const state = {};
-  mergeRobloxDiscovery({ candidates, state, sourceResults: result, metadataByUniverse: new Map([['101', { universeId: '101', rootPlaceId: '1101', originalName: 'Unknown Promotion', creator: { id: '1', name: 'Studio', type: 'Group' }, playing: 100, visits: 1000, favorites: 20 }]]), now: '2026-09-10T00:00:00Z' });
+  mergeRobloxDiscovery({ candidates, state, sourceResults: result, metadataByUniverse: new Map([['101', { universeId: '101', rootPlaceId: '1101', originalName: 'Unknown Promotion', creator: { id: '1', name: 'Studio', type: 'Group' }, playing: 100, visits: 1000, favorites: 20 }]]), now: '2026-09-10T00:00:00Z', evaluateFast: fastResult('pass') });
   assert.equal(candidates[0].roblox.latestGrowth.chartSourceCount, 0);
   assert.equal(candidates[0].roblox.rankings['roblox-top-trending'].currentRank, null);
   assert.equal(candidates[0].sources[0].currentRank, null);
@@ -270,14 +284,14 @@ test('Universe ID is the identity across renames while same names in different U
     ['102', { universeId: '102', rootPlaceId: '202', originalName: 'First Quest', creator: { id: '2', name: 'B', type: 'Group' }, playing: 80, visits: 800, favorites: 40 }],
   ]);
   const first = parseRobloxChartsPayload({ sorts: [{ sortDisplayName: 'Top Trending', games: [{ universeId: '101', name: '[UPDATE] First Quest', rank: 20, isSponsored: false }, { universeId: '102', name: 'First Quest', rank: 30, isSponsored: false }] }] }, [TOP]);
-  mergeRobloxDiscovery({ candidates, state, sourceResults: first, metadataByUniverse: metadata, now: '2026-09-09T00:00:00Z' });
+  mergeRobloxDiscovery({ candidates, state, sourceResults: first, metadataByUniverse: metadata, now: '2026-09-09T00:00:00Z', evaluateFast: fastResult('pass') });
   assert.deepEqual(candidates.map((item) => item.id).sort(), ['roblox:101', 'roblox:102']);
   candidates.find((item) => item.id === 'roblox:101').seo = { queryName: 'First Quest' };
   candidates.find((item) => item.id === 'roblox:101').fast = { classification: 'pass' };
 
   metadata.set('101', { ...metadata.get('101'), originalName: 'Galaxy Defenders', playing: 350, visits: 7000, favorites: 300 });
   const renamed = parseRobloxChartsPayload({ sorts: [{ sortDisplayName: 'Top Trending', games: [{ universeId: '101', name: 'Galaxy Defenders', rank: 5, isSponsored: false }] }] }, [TOP]);
-  mergeRobloxDiscovery({ candidates, state, sourceResults: renamed, metadataByUniverse: metadata, now: '2026-09-10T00:00:00Z' });
+  mergeRobloxDiscovery({ candidates, state, sourceResults: renamed, metadataByUniverse: metadata, now: '2026-09-10T00:00:00Z', evaluateFast: fastResult('weak') });
   const candidate = candidates.find((item) => item.id === 'roblox:101');
   assert.equal(candidates.length, 2);
   assert.equal(candidate.firstSeen, '2026-09-09T00:00:00Z');
@@ -288,7 +302,7 @@ test('Universe ID is the identity across renames while same names in different U
   assert.equal(candidate.roblox.rankings['roblox-top-trending'].currentRank, 5);
   assert.equal(candidate.roblox.rankings['roblox-top-trending'].bestRank, 5);
   assert.equal(candidate.seo, undefined);
-  assert.equal(candidate.fast, undefined);
+  assert.equal(candidate.fast.classification, 'weak');
   assert.equal(isSignificantRobloxRename('First Quest', 'Galaxy Defenders'), true);
 });
 
@@ -335,7 +349,7 @@ test('sponsored chart items are not merged as natural discovery evidence', () =>
   const sourceResults = parseRobloxChartsPayload({ sorts: [{ sortDisplayName: 'Top Trending', games: [{ universeId: '999', name: 'Paid Game', rank: 1, isSponsored: true }] }] }, [TOP]);
   const candidates = [];
   const state = {};
-  const result = mergeRobloxDiscovery({ candidates, state, sourceResults, metadataByUniverse: new Map([['999', { universeId: '999', rootPlaceId: '1999', originalName: 'Paid Game', creator: { id: '1', name: 'Studio', type: 'Group' }, playing: 100, visits: 1000, favorites: 20 }]]), now: '2026-09-10T00:00:00Z' });
+  const result = mergeRobloxDiscovery({ candidates, state, sourceResults, metadataByUniverse: new Map([['999', { universeId: '999', rootPlaceId: '1999', originalName: 'Paid Game', creator: { id: '1', name: 'Studio', type: 'Group' }, playing: 100, visits: 1000, favorites: 20 }]]), now: '2026-09-10T00:00:00Z', evaluateFast: fastResult('pass') });
   assert.equal(result.universesFound, 1);
   assert.equal(candidates.length, 1);
   assert.equal(candidates[0].roblox.latestGrowth.chartSourceCount, 0);
@@ -438,6 +452,7 @@ test('a complete validated enrichment batch merges only after validation succeed
     sourceResults,
     fetchOptions: { fetchImpl: async () => response(200, { data: [gameRow('101')] }) },
     now: '2026-09-10T00:00:00Z',
+    evaluateFast: fastResult('pass'),
   });
   assert.equal(result.success, true);
   assert.equal(result.newUniverses, 1);
@@ -468,4 +483,171 @@ test('merge defensively rejects an invalid Universe ID without mutation', () => 
     (error) => error.code === 'ROBLOX_SCHEMA_MISMATCH',
   );
   assert.deepEqual(history, before);
+});
+
+test('baseline weak Roblox is persisted in observation state without becoming a candidate', () => {
+  const candidates = [];
+  const state = {};
+  const result = mergeRobloxDiscovery({
+    candidates,
+    state,
+    sourceResults: chartResultsFor(['101']),
+    metadataByUniverse: new Map([['101', { universeId: '101', rootPlaceId: '1101', originalName: 'Observed Only', creator: { id: '1', name: 'Studio', type: 'Group' }, createdAt: '2026-08-01T00:00:00Z', updatedAt: '2026-09-10T00:00:00Z', playing: 30, visits: 100, favorites: 3 }]]),
+    now: '2026-09-10T00:00:00Z',
+    evaluateFast: fastResult('weak'),
+  });
+  assert.equal(candidates.length, 0);
+  assert.equal(state.roblox.universes['101'].snapshots.length, 1);
+  assert.equal(state.roblox.universes['101'].originalName, 'Observed Only');
+  assert.deepEqual(result.fast, { pass: 0, watch: 0, weak: 1 });
+  assert.equal(result.stateOnlyUniverses, 1);
+  assert.equal(result.promotedThisRun, 0);
+});
+
+test('state-only Roblox uses prior snapshots and promotes automatically after real growth', () => {
+  const candidates = [];
+  const state = {};
+  const dayOneMetadata = new Map([['101', { universeId: '101', rootPlaceId: '1101', originalName: 'Growth Quest', creator: { id: '1', name: 'Studio', type: 'Group' }, createdAt: '2026-09-01T00:00:00Z', updatedAt: '2026-09-09T00:00:00Z', playing: 300, visits: 1000, favorites: 30 }]]);
+  mergeRobloxDiscovery({ candidates, state, sourceResults: parseRobloxChartsPayload({ sorts: [{ sortDisplayName: 'Top Trending', games: [{ universeId: '101', name: 'Growth Quest', rank: 43, isSponsored: false }] }] }, [TOP]), metadataByUniverse: dayOneMetadata, now: '2026-09-09T00:00:00Z', evaluateFast: realFast });
+  assert.equal(candidates.length, 0);
+
+  const dayTwoCharts = parseRobloxChartsPayload({ sorts: [
+    { sortDisplayName: 'Top Trending', games: [{ universeId: '101', name: 'Growth Quest', rank: 18, isSponsored: false }] },
+    { sortDisplayName: 'Up-and-Coming', games: [{ universeId: '101', name: 'Growth Quest', rank: 18, isSponsored: false }] },
+  ] }, [TOP, UPCOMING]);
+  const dayTwoMetadata = new Map([['101', { ...dayOneMetadata.get('101'), updatedAt: '2026-09-10T00:00:00Z', playing: 1400, visits: 26000, favorites: 450 }]]);
+  const result = mergeRobloxDiscovery({ candidates, state, sourceResults: dayTwoCharts, metadataByUniverse: dayTwoMetadata, now: '2026-09-10T00:00:00Z', evaluateFast: realFast });
+  assert.equal(result.promotedThisRun, 1);
+  assert.equal(candidates.length, 1);
+  assert.equal(candidates[0].fast.classification, 'pass');
+  assert.equal(candidates[0].firstSeen, '2026-09-09T00:00:00Z');
+  assert.equal(candidates[0].roblox.promotedAt, '2026-09-10T00:00:00Z');
+  assert.equal(candidates[0].roblox.latestGrowth.ccuDelta24h, 1100);
+  assert.equal(state.roblox.universes['101'].snapshots.length, 2);
+});
+
+test('state-only weak Roblox is absent from every candidate-backed paid queue', () => {
+  const candidates = [];
+  const state = {};
+  mergeRobloxDiscovery({
+    candidates,
+    state,
+    sourceResults: chartResultsFor(['101']),
+    metadataByUniverse: new Map([['101', { universeId: '101', rootPlaceId: '1101', originalName: 'No Quota Game', creator: { id: '1', name: 'Studio', type: 'Group' }, playing: 30, visits: 100, favorites: 3 }]]),
+    now: '2026-09-10T00:00:00Z',
+    evaluateFast: fastResult('weak'),
+  });
+  const transient = buildRobloxTransientCandidate(state.roblox.universes['101'], fastResult('weak')());
+  assert.equal(allowsPaidRobloxVerification(transient), false);
+  for (const queue of ['serper', 'google-cse', 'seo-expansion', 'serpapi', 'searchapi', 'apify', 'social', 'youtube']) {
+    assert.deepEqual(candidates.filter((candidate) => candidate.id === 'roblox:101'), [], `${queue} must only receive persisted candidates`);
+  }
+});
+
+test('watch does not promote by default while pass and strong growth do', () => {
+  for (const [classification, overrides, expected] of [
+    ['watch', {}, 0],
+    ['pass', {}, 1],
+    ['watch', { strongGrowth: true }, 1],
+  ]) {
+    const candidates = [];
+    const state = {};
+    mergeRobloxDiscovery({ candidates, state, sourceResults: chartResultsFor(['101']), metadataByUniverse: new Map([['101', { universeId: '101', rootPlaceId: '1101', originalName: 'Promotion Gate', creator: { id: '1', name: 'Studio', type: 'Group' }, playing: 100, visits: 1000, favorites: 20 }]]), now: '2026-09-10T00:00:00Z', evaluateFast: fastResult(classification, overrides) });
+    assert.equal(candidates.length, expected);
+  }
+});
+
+test('a newly promoted Fast pass can enter Roblox Today Review in the same run', () => {
+  const candidates = [];
+  const state = {};
+  mergeRobloxDiscovery({
+    candidates,
+    state,
+    sourceResults: chartResultsFor(['101']),
+    metadataByUniverse: new Map([['101', { universeId: '101', rootPlaceId: '1101', originalName: 'Immediate Review', creator: { id: '1', name: 'Studio', type: 'Group' }, createdAt: '2026-09-09T00:00:00Z', updatedAt: '2026-09-10T00:00:00Z', playing: 500, visits: 12000, favorites: 900 }]]),
+    now: '2026-09-10T00:00:00Z',
+    evaluateFast: fastResult('pass'),
+  });
+  const review = buildTodayReview(candidates, { nowMs: Date.parse('2026-09-10T00:00:00Z') });
+  assert.equal(review.selected.length, 1);
+  assert.equal(review.selected[0].todayReview.lane, 'roblox-growth');
+});
+
+test('an existing promoted candidate remains after Fast falls to weak', () => {
+  const candidates = [];
+  const state = {};
+  const sourceResults = chartResultsFor(['101']);
+  const metadata = new Map([['101', { universeId: '101', rootPlaceId: '1101', originalName: 'Stable Identity', creator: { id: '1', name: 'Studio', type: 'Group' }, playing: 100, visits: 1000, favorites: 20 }]]);
+  mergeRobloxDiscovery({ candidates, state, sourceResults, metadataByUniverse: metadata, now: '2026-09-09T00:00:00Z', evaluateFast: fastResult('pass') });
+  mergeRobloxDiscovery({ candidates, state, sourceResults, metadataByUniverse: metadata, now: '2026-09-10T00:00:00Z', evaluateFast: fastResult('weak') });
+  assert.equal(candidates.length, 1);
+  assert.equal(candidates[0].fast.classification, 'weak');
+  assert.equal(state.roblox.universes['101'].promotedAt, '2026-09-09T00:00:00Z');
+});
+
+test('state identity and firstSeen survive a rename before promotion', () => {
+  const candidates = [];
+  const state = {};
+  const firstMetadata = new Map([['101', { universeId: '101', rootPlaceId: '1101', originalName: 'First Quest', creator: { id: '1', name: 'Studio', type: 'Group' }, playing: 30, visits: 100, favorites: 3 }]]);
+  mergeRobloxDiscovery({ candidates, state, sourceResults: chartResultsFor(['101']), metadataByUniverse: firstMetadata, now: '2026-09-09T00:00:00Z', evaluateFast: fastResult('weak') });
+  const renamedMetadata = new Map([['101', { ...firstMetadata.get('101'), originalName: 'Galaxy Defenders', playing: 500 }]]);
+  const renamedCharts = parseRobloxChartsPayload({ sorts: [{ sortDisplayName: 'Top Trending', games: [{ universeId: '101', name: 'Galaxy Defenders', rank: 3, isSponsored: false }] }] }, [TOP]);
+  mergeRobloxDiscovery({ candidates, state, sourceResults: renamedCharts, metadataByUniverse: renamedMetadata, now: '2026-09-10T00:00:00Z', evaluateFast: fastResult('pass') });
+  assert.equal(Object.keys(state.roblox.universes).length, 1);
+  assert.equal(state.roblox.universes['101'].nameHistory.length, 2);
+  assert.equal(candidates[0].id, 'roblox:101');
+  assert.equal(candidates[0].gameName, 'Galaxy Defenders');
+  assert.equal(candidates[0].firstSeen, '2026-09-09T00:00:00Z');
+});
+
+test('same-name Universes are observed and promoted independently', () => {
+  const candidates = [];
+  const state = {};
+  const sourceResults = parseRobloxChartsPayload({ sorts: [{ sortDisplayName: 'Top Trending', games: [
+    { universeId: '101', name: 'Shared Name', rank: 1, isSponsored: false },
+    { universeId: '102', name: 'Shared Name', rank: 2, isSponsored: false },
+  ] }] }, [TOP]);
+  const metadata = new Map([
+    ['101', { universeId: '101', rootPlaceId: '1101', originalName: 'Shared Name', creator: { id: '1', name: 'A', type: 'Group' }, playing: 100, visits: 1000, favorites: 20 }],
+    ['102', { universeId: '102', rootPlaceId: '1102', originalName: 'Shared Name', creator: { id: '2', name: 'B', type: 'Group' }, playing: 50, visits: 500, favorites: 10 }],
+  ]);
+  mergeRobloxDiscovery({ candidates, state, sourceResults, metadataByUniverse: metadata, now: '2026-09-10T00:00:00Z', evaluateFast: (candidate) => fastResult(candidate.id === 'roblox:101' ? 'pass' : 'weak')() });
+  assert.deepEqual(Object.keys(state.roblox.universes).sort(), ['101', '102']);
+  assert.deepEqual(candidates.map((candidate) => candidate.id), ['roblox:101']);
+});
+
+test('observation GC removes only stale never-promoted Universes', () => {
+  const state = { roblox: { universes: {
+    stale: { lastSeen: '2026-07-01T00:00:00Z', snapshots: [] },
+    promoted: { lastSeen: '2026-07-01T00:00:00Z', promotedAt: '2026-06-01T00:00:00Z', snapshots: [] },
+    retained: { lastSeen: '2026-07-01T00:00:00Z', specialRetention: true, snapshots: [] },
+    recent: { lastSeen: '2026-09-01T00:00:00Z', snapshots: [] },
+  } } };
+  const candidates = [{ id: 'roblox:candidate', roblox: { universeId: 'candidate' } }];
+  state.roblox.universes.candidate = { lastSeen: '2026-07-01T00:00:00Z', snapshots: [] };
+  const removed = pruneRobloxObservationPool(state, candidates, Date.parse('2026-09-10T00:00:00Z'));
+  assert.deepEqual(removed, ['stale']);
+  assert.deepEqual(Object.keys(state.roblox.universes).sort(), ['candidate', 'promoted', 'recent', 'retained']);
+  assert.equal(candidates.length, 1);
+});
+
+test('116-observation baseline promotes one and cannot consume 115 candidate slots', () => {
+  const ids = Array.from({ length: 116 }, (_, index) => String(1001 + index));
+  const nonRoblox = Array.from({ length: 3000 }, (_, index) => ({ id: `existing-${index}`, gameName: `Existing ${index}`, normalizedName: `existing ${index}`, firstSeen: '2026-01-01T00:00:00Z', lastSeen: '2026-09-01T00:00:00Z', sources: [], recommendation: 'pending' }));
+  const before = structuredClone(nonRoblox);
+  const candidates = structuredClone(nonRoblox);
+  const state = {};
+  const sourceResults = chartResultsFor(ids);
+  const metadata = new Map(ids.map((id) => [id, { universeId: id, rootPlaceId: String(Number(id) + 5000), originalName: `Game ${id}`, creator: { id: '1', name: 'Studio', type: 'Group' }, playing: 100, visits: 1000, favorites: 20 }]));
+  const result = mergeRobloxDiscovery({ candidates, state, sourceResults, metadataByUniverse: metadata, now: '2026-09-10T00:00:00Z', evaluateFast: (candidate) => fastResult(candidate.id === 'roblox:1001' ? 'pass' : 'weak')() });
+  assert.equal(result.observedUniverses, 116);
+  assert.equal(result.newObservedUniverses, 116);
+  assert.equal(result.stateOnlyUniverses, 115);
+  assert.equal(result.promotedThisRun, 1);
+  assert.deepEqual(result.fast, { pass: 1, watch: 0, weak: 115 });
+  assert.equal(Object.keys(state.roblox.universes).length, 116);
+  assert.equal(candidates.length, 3001);
+  assert.equal(candidates.filter((candidate) => candidate.id.startsWith('roblox:')).length, 1);
+  assert.deepEqual(candidates.slice(0, 3000), before);
+  assert.equal(Math.max(0, candidates.length - 3000), 1);
 });

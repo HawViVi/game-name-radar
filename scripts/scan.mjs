@@ -249,19 +249,32 @@ let robloxDiscovery={
   universesFound:0,
   newUniverses:0,
   updatedUniverses:0,
+  observedUniverses:0,
+  newObservedUniverses:0,
+  stateOnlyUniverses:0,
+  promotedThisRun:0,
+  totalPromotedCandidates:candidates.filter(isRobloxCandidate).length,
+  prunedObservations:0,
+  fast:{pass:0,watch:0,weak:0},
   errors:[...(robloxScan.errors||[])],
   generatedAt:robloxScan.generatedAt,
 };
 if(robloxScan.success){
-  const existingUniverses=new Set(candidates.filter(isRobloxCandidate).map(candidate=>String(candidate.roblox?.universeId||candidate.id).replace(/^roblox:/,'')));
   try{
-    const transaction=await runRobloxDiscoveryTransaction({candidates,state:radarState,sourceResults:robloxScan.sourceResults,now});
+    const transaction=await runRobloxDiscoveryTransaction({
+      candidates,
+      state:radarState,
+      sourceResults:robloxScan.sourceResults,
+      now,
+      evaluateFast:(candidate,nowMs)=>calculateFastSignals(candidate,{},nowMs),
+    });
     robloxDiscovery={...robloxDiscovery,...transaction,errors:[...robloxDiscovery.errors,...transaction.errors]};
     if(transaction.success){
-      totalAdded+=transaction.newUniverses;
+      totalAdded+=transaction.promotedThisRun;
+      const promotedIds=new Set(transaction.promotedUniverseIds||[]);
       for(const result of robloxScan.sourceResults){
-        const added=new Set(result.entries.filter(entry=>!existingUniverses.has(String(entry.universeId))).map(entry=>String(entry.universeId))).size;
-        logs.push({ok:true,sourceId:result.source.id,sourceName:result.source.name,total:result.entries.length,added});
+        const added=new Set(result.entries.filter(entry=>promotedIds.has(String(entry.universeId))).map(entry=>String(entry.universeId))).size;
+        logs.push({ok:true,sourceId:result.source.id,sourceName:result.source.name,total:result.entries.length,added,observed:result.entries.length});
       }
     }else{
       for(const sourceId of robloxScan.chartSources)logs.push({ok:false,sourceId,error:'Roblox enrichment failed; previous candidates and snapshots were preserved'});
