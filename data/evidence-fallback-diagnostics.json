@@ -1,45 +1,48 @@
 {
-  "generatedAt": "2026-09-15T05:01:48.794Z",
+  "generatedAt": "2026-09-16T04:57:30.458Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2400,
+  "pendingSeo": 2390,
   "channelCounts": {
-    "pending": 384,
-    "online": 2016
+    "pending": 379,
+    "online": 2010,
+    "wiki": 1
   },
   "fastClassCounts": {
-    "pending:pending": 384,
-    "online:pending": 2016
+    "pending:pending": 379,
+    "online:pending": 2010,
+    "wiki:pending": 1
   },
   "strategicCounts": {
-    "pending:0": 371,
-    "online:2": 346,
-    "online:1": 1670,
-    "pending:1": 13
+    "pending:0": 366,
+    "online:2": 337,
+    "online:1": 1673,
+    "pending:1": 13,
+    "wiki:1": 1
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1994
+      "count": 1980
     },
     {
       "id": "itch-newest-web",
-      "count": 1961
+      "count": 1952
     },
     {
       "id": "itch-new-feed",
-      "count": 1944
+      "count": 1930
     },
     {
       "id": "itch-new-popular-web",
-      "count": 338
+      "count": 332
     },
     {
       "id": "itch-popular",
-      "count": 338
+      "count": 332
     },
     {
       "id": "trends-rising-7d",
-      "count": 283
+      "count": 282
     },
     {
       "id": "trends-rising-30d",
@@ -51,11 +54,11 @@
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 97
+      "count": 98
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 89
+      "count": 88
     },
     {
       "id": "trends-rising-7d-itch-io",
@@ -63,7 +66,7 @@
     },
     {
       "id": "trends-rising-30d-indie-game",
-      "count": 47
+      "count": 46
     },
     {
       "id": "trends-rising-30d-itch-io",
@@ -94,20 +97,20 @@
       "count": 13
     },
     {
+      "id": "steam-latest-indie",
+      "count": 6
+    },
+    {
+      "id": "steam-new",
+      "count": 6
+    },
+    {
       "id": "y8-new",
       "count": 5
     },
     {
-      "id": "steam-latest-indie",
-      "count": 5
-    },
-    {
-      "id": "steam-new",
-      "count": 5
-    },
-    {
       "id": "steam-popular-new",
-      "count": 2
+      "count": 3
     },
     {
       "id": "lagged-new",
