@@ -1,52 +1,49 @@
 {
-  "generatedAt": "2026-09-16T04:57:30.458Z",
+  "generatedAt": "2026-09-17T05:00:25.530Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2390,
+  "pendingSeo": 2375,
   "channelCounts": {
-    "pending": 379,
-    "online": 2010,
-    "wiki": 1
+    "pending": 382,
+    "online": 1993
   },
   "fastClassCounts": {
-    "pending:pending": 379,
-    "online:pending": 2010,
-    "wiki:pending": 1
+    "pending:pending": 382,
+    "online:pending": 1993
   },
   "strategicCounts": {
-    "pending:0": 366,
-    "online:2": 337,
-    "online:1": 1673,
-    "pending:1": 13,
-    "wiki:1": 1
+    "pending:0": 369,
+    "online:2": 330,
+    "online:1": 1663,
+    "pending:1": 13
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1980
+      "count": 1972
     },
     {
       "id": "itch-newest-web",
-      "count": 1952
+      "count": 1944
     },
     {
       "id": "itch-new-feed",
-      "count": 1930
+      "count": 1922
     },
     {
       "id": "itch-new-popular-web",
-      "count": 332
+      "count": 315
     },
     {
       "id": "itch-popular",
-      "count": 332
+      "count": 315
     },
     {
       "id": "trends-rising-7d",
-      "count": 282
+      "count": 284
     },
     {
       "id": "trends-rising-30d",
-      "count": 182
+      "count": 183
     },
     {
       "id": "trends-rising-7d-horror-game",
@@ -58,15 +55,15 @@
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 88
+      "count": 89
     },
     {
       "id": "trends-rising-7d-itch-io",
-      "count": 65
+      "count": 66
     },
     {
       "id": "trends-rising-30d-indie-game",
-      "count": 46
+      "count": 47
     },
     {
       "id": "trends-rising-30d-itch-io",
@@ -90,11 +87,11 @@
     },
     {
       "id": "itch-featured-feed",
-      "count": 13
+      "count": 14
     },
     {
       "id": "itch-featured",
-      "count": 13
+      "count": 14
     },
     {
       "id": "steam-latest-indie",
@@ -110,7 +107,7 @@
     },
     {
       "id": "steam-popular-new",
-      "count": 3
+      "count": 2
     },
     {
       "id": "lagged-new",
@@ -118,6 +115,24 @@
     }
   ],
   "samples": [
+    {
+      "name": "Lockpicks-11",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 9,
+      "strategicCount": 2,
+      "sourceCount": 4,
+      "sourceIds": [
+        "itch-featured-feed",
+        "itch-featured",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
     {
       "name": "Dungeonbound",
       "channel": "online",
@@ -1039,25 +1054,6 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 7,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "The Black Hole Explorer",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 5,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
