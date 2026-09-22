@@ -1,69 +1,69 @@
 {
-  "generatedAt": "2026-09-21T05:06:08.937Z",
+  "generatedAt": "2026-09-22T05:07:07.108Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2339,
+  "pendingSeo": 2332,
   "channelCounts": {
-    "pending": 383,
-    "online": 1956
+    "pending": 386,
+    "online": 1946
   },
   "fastClassCounts": {
-    "pending:pending": 383,
-    "online:pending": 1956
+    "pending:pending": 386,
+    "online:pending": 1946
   },
   "strategicCounts": {
-    "pending:0": 368,
-    "online:2": 299,
-    "online:1": 1657,
+    "pending:0": 371,
+    "online:2": 293,
+    "online:1": 1653,
     "pending:1": 15
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1922
+      "count": 1915
     },
     {
       "id": "itch-newest-web",
-      "count": 1911
+      "count": 1905
     },
     {
       "id": "itch-new-feed",
-      "count": 1872
+      "count": 1865
     },
     {
       "id": "trends-rising-7d",
-      "count": 302
+      "count": 305
     },
     {
       "id": "itch-new-popular-web",
-      "count": 280
+      "count": 269
     },
     {
       "id": "itch-popular",
-      "count": 280
+      "count": 269
     },
     {
       "id": "trends-rising-30d",
-      "count": 188
+      "count": 195
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 149
+      "count": 150
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 99
+      "count": 105
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 90
+      "count": 91
     },
     {
       "id": "trends-rising-7d-itch-io",
-      "count": 70
+      "count": 71
     },
     {
       "id": "trends-rising-30d-indie-game",
-      "count": 49
+      "count": 50
     },
     {
       "id": "trends-rising-30d-itch-io",
@@ -87,11 +87,11 @@
     },
     {
       "id": "itch-featured-feed",
-      "count": 16
+      "count": 17
     },
     {
       "id": "itch-featured",
-      "count": 16
+      "count": 17
     },
     {
       "id": "steam-latest-indie",
@@ -115,6 +115,24 @@
     }
   ],
   "samples": [
+    {
+      "name": "Eat not, Want not",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 4,
+      "sourceIds": [
+        "itch-featured-feed",
+        "itch-featured",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
     {
       "name": "Lockpicks-11",
       "channel": "online",
@@ -1035,25 +1053,6 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 5,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Murder on the Fursonacon Express",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 7,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
