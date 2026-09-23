@@ -1,61 +1,61 @@
 {
-  "generatedAt": "2026-09-22T05:07:07.108Z",
+  "generatedAt": "2026-09-23T04:53:22.639Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2332,
+  "pendingSeo": 2317,
   "channelCounts": {
-    "pending": 386,
-    "online": 1946
+    "pending": 392,
+    "online": 1925
   },
   "fastClassCounts": {
-    "pending:pending": 386,
-    "online:pending": 1946
+    "pending:pending": 392,
+    "online:pending": 1925
   },
   "strategicCounts": {
-    "pending:0": 371,
-    "online:2": 293,
-    "online:1": 1653,
+    "pending:0": 377,
+    "online:2": 274,
+    "online:1": 1651,
     "pending:1": 15
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1915
+      "count": 1895
     },
     {
       "id": "itch-newest-web",
-      "count": 1905
+      "count": 1884
     },
     {
       "id": "itch-new-feed",
-      "count": 1865
+      "count": 1845
     },
     {
       "id": "trends-rising-7d",
-      "count": 305
+      "count": 310
     },
     {
       "id": "itch-new-popular-web",
-      "count": 269
+      "count": 250
     },
     {
       "id": "itch-popular",
-      "count": 269
+      "count": 250
     },
     {
       "id": "trends-rising-30d",
-      "count": 195
+      "count": 198
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 150
+      "count": 154
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 105
+      "count": 108
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 91
+      "count": 92
     },
     {
       "id": "trends-rising-7d-itch-io",
@@ -172,6 +172,25 @@
     },
     {
       "name": "Revive My Wounds",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 6,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Fields of Fortune",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
@@ -1034,25 +1053,6 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 9,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "tamaemu",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 5,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
