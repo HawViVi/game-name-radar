@@ -1,57 +1,57 @@
 {
-  "generatedAt": "2026-09-26T05:08:52.190Z",
+  "generatedAt": "2026-09-27T05:26:29.286Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2287,
+  "pendingSeo": 2282,
   "channelCounts": {
-    "pending": 399,
-    "online": 1888
+    "pending": 406,
+    "online": 1876
   },
   "fastClassCounts": {
-    "pending:pending": 399,
-    "online:pending": 1888
+    "pending:pending": 406,
+    "online:pending": 1876
   },
   "strategicCounts": {
-    "pending:0": 385,
-    "online:2": 237,
+    "pending:0": 392,
+    "online:2": 225,
     "online:1": 1651,
     "pending:1": 14
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1855
+      "count": 1843
     },
     {
       "id": "itch-newest-web",
-      "count": 1847
+      "count": 1835
     },
     {
       "id": "itch-new-feed",
-      "count": 1805
+      "count": 1793
     },
     {
       "id": "trends-rising-7d",
-      "count": 320
-    },
-    {
-      "id": "itch-new-popular-web",
-      "count": 213
-    },
-    {
-      "id": "itch-popular",
-      "count": 213
+      "count": 327
     },
     {
       "id": "trends-rising-30d",
-      "count": 204
+      "count": 209
+    },
+    {
+      "id": "itch-new-popular-web",
+      "count": 201
+    },
+    {
+      "id": "itch-popular",
+      "count": 201
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 161
+      "count": 166
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 112
+      "count": 115
     },
     {
       "id": "trends-rising-7d-indie-game",
@@ -59,15 +59,15 @@
     },
     {
       "id": "trends-rising-7d-itch-io",
-      "count": 73
+      "count": 75
     },
     {
       "id": "trends-rising-30d-indie-game",
-      "count": 51
+      "count": 52
     },
     {
       "id": "trends-rising-30d-itch-io",
-      "count": 46
+      "count": 47
     },
     {
       "id": "newgrounds-latest",
@@ -760,25 +760,6 @@
       ]
     },
     {
-      "name": "Delirescent",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 5,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
       "name": "Empire Ticker (エンパイアティッカー) — Prototype",
       "channel": "online",
       "fastClass": "pending",
@@ -817,63 +798,6 @@
       ]
     },
     {
-      "name": "Cat Shoot to Move",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 5,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Pixel Cult v0.1",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 5,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Gamma",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 5,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
       "name": "Threads of Tomot",
       "channel": "online",
       "fastClass": "pending",
@@ -882,25 +806,6 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 6,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Quackyard",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 5,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
@@ -950,25 +855,6 @@
       ]
     },
     {
-      "name": "Progress98",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 5,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
       "name": "8-Ball Idle",
       "channel": "online",
       "fastClass": "pending",
@@ -1007,7 +893,26 @@
       ]
     },
     {
-      "name": "GET RICH QUICK 101",
+      "name": "Cook the Dungeon",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 6,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Idle Progress Bar MMO",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
@@ -1026,7 +931,26 @@
       ]
     },
     {
-      "name": "Hellhop",
+      "name": "コラプトカード・スクール v0.1",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 9,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Sigilsmith",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
@@ -1045,7 +969,26 @@
       ]
     },
     {
-      "name": "O, Your Heavenly Stars!",
+      "name": "Bumper to Billions",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 6,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "RPG In Another World",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
@@ -1053,6 +996,63 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 5,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-popular-web",
+        "itch-popular",
+        "itch-new-feed"
+      ]
+    },
+    {
+      "name": "Little Big Space Clicker",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 5,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Ensis IDLE",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 9,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "The Biggest Flame",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 6,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
