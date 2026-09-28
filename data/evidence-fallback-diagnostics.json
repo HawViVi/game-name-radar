@@ -1,65 +1,65 @@
 {
-  "generatedAt": "2026-09-27T05:26:29.286Z",
+  "generatedAt": "2026-09-28T05:33:24.543Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2282,
+  "pendingSeo": 2278,
   "channelCounts": {
-    "pending": 406,
-    "online": 1876
+    "pending": 414,
+    "online": 1864
   },
   "fastClassCounts": {
-    "pending:pending": 406,
-    "online:pending": 1876
+    "pending:pending": 414,
+    "online:pending": 1864
   },
   "strategicCounts": {
-    "pending:0": 392,
-    "online:2": 225,
-    "online:1": 1651,
-    "pending:1": 14
+    "pending:0": 399,
+    "online:2": 214,
+    "online:1": 1650,
+    "pending:1": 15
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1843
+      "count": 1832
     },
     {
       "id": "itch-newest-web",
-      "count": 1835
+      "count": 1824
     },
     {
       "id": "itch-new-feed",
-      "count": 1793
+      "count": 1782
     },
     {
       "id": "trends-rising-7d",
-      "count": 327
+      "count": 334
     },
     {
       "id": "trends-rising-30d",
-      "count": 209
+      "count": 211
     },
     {
       "id": "itch-new-popular-web",
-      "count": 201
+      "count": 189
     },
     {
       "id": "itch-popular",
-      "count": 201
+      "count": 189
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 166
+      "count": 171
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 115
+      "count": 116
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 93
+      "count": 94
     },
     {
       "id": "trends-rising-7d-itch-io",
-      "count": 75
+      "count": 77
     },
     {
       "id": "trends-rising-30d-indie-game",
@@ -67,7 +67,7 @@
     },
     {
       "id": "trends-rising-30d-itch-io",
-      "count": 47
+      "count": 48
     },
     {
       "id": "newgrounds-latest",
@@ -87,19 +87,19 @@
     },
     {
       "id": "itch-featured-feed",
-      "count": 16
+      "count": 17
     },
     {
       "id": "itch-featured",
-      "count": 16
+      "count": 17
     },
     {
       "id": "steam-latest-indie",
-      "count": 6
+      "count": 7
     },
     {
       "id": "steam-new",
-      "count": 6
+      "count": 7
     },
     {
       "id": "y8-new",
@@ -912,25 +912,6 @@
       ]
     },
     {
-      "name": "Idle Progress Bar MMO",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 5,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
       "name": "コラプトカード・スクール v0.1",
       "channel": "online",
       "fastClass": "pending",
@@ -950,25 +931,6 @@
       ]
     },
     {
-      "name": "Sigilsmith",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 5,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
       "name": "Bumper to Billions",
       "channel": "online",
       "fastClass": "pending",
@@ -977,44 +939,6 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 6,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "RPG In Another World",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 5,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-popular-web",
-        "itch-popular",
-        "itch-new-feed"
-      ]
-    },
-    {
-      "name": "Little Big Space Clicker",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 5,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
@@ -1053,6 +977,82 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 6,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "For The Fame",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 12,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Draw Your Heart",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 6,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Bureaucracy Simulator",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 9,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Paws to the Stars",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 9,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [

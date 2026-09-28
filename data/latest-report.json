@@ -1,30 +1,30 @@
 {
-  "scannedAt": "2026-09-27T05:24:18.253Z",
+  "scannedAt": "2026-09-28T05:31:19.080Z",
   "targetMarket": "US_GLOBAL",
   "primaryMarket": "US",
   "referenceMarket": "WORLDWIDE",
-  "totalAdded": 199,
+  "totalAdded": 222,
   "sources": [
     {
       "ok": true,
       "sourceId": "itch-newest-web",
       "sourceName": "itch.io 最新网页游戏",
       "total": 36,
-      "added": 34
+      "added": 35
     },
     {
       "ok": true,
       "sourceId": "itch-new-popular-web",
       "sourceName": "itch.io New & Popular",
       "total": 36,
-      "added": 21
+      "added": 12
     },
     {
       "ok": true,
       "sourceId": "itch-new-feed",
       "sourceName": "itch.io New Feed",
       "total": 36,
-      "added": 36
+      "added": 34
     },
     {
       "ok": true,
@@ -45,20 +45,21 @@
       "sourceId": "steam-popular-new",
       "sourceName": "Steam 热门新发行",
       "total": 50,
-      "added": 7
+      "added": 12
     },
     {
       "ok": true,
       "sourceId": "steam-latest-indie",
       "sourceName": "Steam 最新独立游戏",
       "total": 50,
-      "added": 12
+      "added": 22
     },
     {
-      "ok": false,
+      "ok": true,
       "sourceId": "newgrounds-daily-top",
       "sourceName": "Newgrounds Daily Top Five",
-      "error": "请求超时"
+      "total": 5,
+      "added": 5
     },
     {
       "ok": true,
@@ -72,7 +73,7 @@
       "sourceId": "crazygames-new",
       "sourceName": "CrazyGames 新游戏",
       "total": 70,
-      "added": 0
+      "added": 3
     },
     {
       "ok": true,
@@ -86,7 +87,7 @@
       "sourceId": "y8-new",
       "sourceName": "Y8 新游戏",
       "total": 73,
-      "added": 38
+      "added": 41
     },
     {
       "ok": false,
@@ -105,43 +106,43 @@
       "ok": true,
       "sourceId": "trends-rising-7d-itch-io",
       "sourceName": "Trends上涨 7天 · itch io",
-      "total": 7,
-      "added": 5
+      "total": 12,
+      "added": 11
     },
     {
       "ok": true,
       "sourceId": "trends-rising-30d-itch-io",
       "sourceName": "Trends上涨 30天 · itch io",
-      "total": 13,
-      "added": 7
+      "total": 15,
+      "added": 8
     },
     {
       "ok": true,
       "sourceId": "trends-rising-7d-indie-game",
       "sourceName": "Trends上涨 7天 · indie game",
-      "total": 0,
-      "added": 0
+      "total": 2,
+      "added": 2
     },
     {
       "ok": true,
       "sourceId": "trends-rising-30d-indie-game",
       "sourceName": "Trends上涨 30天 · indie game",
-      "total": 2,
-      "added": 1
+      "total": 1,
+      "added": 0
     },
     {
       "ok": true,
       "sourceId": "trends-rising-7d-horror-game",
       "sourceName": "Trends上涨 7天 · horror game",
-      "total": 10,
-      "added": 8
+      "total": 16,
+      "added": 12
     },
     {
       "ok": true,
       "sourceId": "trends-rising-30d-horror-game",
       "sourceName": "Trends上涨 30天 · horror game",
-      "total": 24,
-      "added": 12
+      "total": 22,
+      "added": 7
     }
   ],
   "robloxDiscovery": {
@@ -164,14 +165,14 @@
       "weak": 0
     },
     "errors": [],
-    "generatedAt": "2026-09-27T05:24:18.254Z"
+    "generatedAt": "2026-09-28T05:31:19.081Z"
   },
   "seoVerified": 90,
   "seoErrors": 0,
   "fastModelVersion": 3,
   "fastPassedCount": 252,
-  "fastWatchCount": 261,
-  "fastRejectedCount": 205,
+  "fastWatchCount": 276,
+  "fastRejectedCount": 194,
   "youtubeEnabled": false,
   "youtubeConfigured": false,
   "youtubeVerified": 0,
@@ -193,9 +194,9 @@
     "independent": 0,
     "test-now": 0,
     "page": 2,
-    "watch": 469,
-    "reject": 47,
-    "pending": 2482,
+    "watch": 486,
+    "reject": 44,
+    "pending": 2468,
     "error": 0
   },
   "trendProvider": "serpapi",
@@ -207,7 +208,7 @@
     "enabled": true,
     "month": "2026-09",
     "monthUsed": 245,
-    "day": "2026-09-27",
+    "day": "2026-09-28",
     "dayUsed": 0,
     "monthlyLimit": 245,
     "dailyLimit": 245,
@@ -215,7 +216,7 @@
   },
   "apifyConfigured": false,
   "apifyAccountStatus": {
-    "checkedAt": "2026-09-27T05:24:16.990Z",
+    "checkedAt": "2026-09-28T05:31:18.098Z",
     "configured": false,
     "ok": false,
     "provider": "apify",
@@ -233,26 +234,26 @@
   },
   "seoProvider": "serper-google-search",
   "seoProviderCounts": {
-    "serper+autocomplete": 521,
+    "serper+autocomplete": 525,
     "evidence-fallback": 103,
     "duckduckgo+autocomplete": 95
   },
   "serperConfigured": true,
   "serperUsage": {
     "enabled": true,
-    "totalUsed": 1080,
-    "day": "2026-09-27",
+    "totalUsed": 1170,
+    "day": "2026-09-28",
     "dayUsed": 90,
     "totalLimit": 2450,
     "dailyLimit": 2450,
-    "updatedAt": "2026-09-27T05:26:28.855Z",
+    "updatedAt": "2026-09-28T05:33:24.142Z",
     "lastError": null
   },
   "googleCseConfiguredSlots": 0,
   "googleCseUsage": {
     "enabled": false,
     "configuredSlots": 0,
-    "day": "2026-09-27",
+    "day": "2026-09-28",
     "totalDayUsed": 0,
     "totalDailyLimit": 0,
     "slots": {},
@@ -264,9 +265,9 @@
   },
   "siteTypeModelVersion": 2,
   "siteTypeCounts": {
-    "online": 2340,
+    "online": 2332,
     "wiki": 153,
-    "pending": 507
+    "pending": 515
   },
   "wikiPrelaunchModelVersion": 2,
   "wikiPrelaunchCounts": {
@@ -278,13 +279,13 @@
   "todayReview": {
     "modelVersion": 2,
     "selectedCount": 5,
-    "candidateCount": 201,
+    "candidateCount": 208,
     "laneCounts": {
-      "confirmed-acceleration": 5,
-      "fresh-platform-growth": 0,
+      "confirmed-acceleration": 3,
+      "fresh-platform-growth": 2,
       "roblox-growth": 0
     },
-    "generatedAt": "2026-09-27T05:26:32.877Z"
+    "generatedAt": "2026-09-28T05:33:27.449Z"
   },
   "serperVerification": {
     "rushMode": true,
@@ -307,103 +308,103 @@
     "errors": 0,
     "quotaStopped": false,
     "verifiedNames": [
-      "Commando Force",
-      "Ocean Rescue Sort",
-      "Real Car Bmw M4 Drift",
-      "Lucid Cats",
-      "Stranded with You",
-      "Scratch Tickets With Your Friends 🎰",
-      "Steam Frame",
-      "Gunman Contracts - Stand Alone",
-      "Nocturne",
-      "Anime Shop Simulator ✨",
-      "Love, Grandma",
-      "FAR FROM HOME",
-      "Deforest Station",
-      "BEZEL_BREAK",
-      "Sinclair's rather popular isn't he?",
-      "Seal Ordeal",
-      "LOKO NEJO",
-      "Froken",
-      "Soloko",
-      "AstralOS",
-      "Tug Of Rockets",
-      "Horror Music Room",
-      "RALA-8",
-      "Tilt Box",
-      "Esc8",
-      "Break the Piñatas",
-      "Pack N Race",
-      "Marisa's Star Stacker",
-      "Polar Peril",
-      "Digable Planetoids",
-      "doodle towers",
-      "Robot Wants Kitty — HTML5 Remaster",
-      "Recipe Frenzy",
-      "135_Rags of Racs_Dhelangan Studio_PC",
-      "Wender",
-      "Save Me a Slice!",
-      "icely's \"Arrows Puzzle\"",
-      "My Castle: Merge & Story",
-      "Obby: +1 Laser to Break Walls",
-      "Island Siege",
-      "Little Troubles in Spooky Town",
-      "BLOCK RUSH",
-      "The Snake That Eats Puzzle Game Mechanics",
-      "Rollout Inline",
-      "Planet Merge",
-      "Valheim",
-      "Smashing Bottles",
-      "Path of the idle cultivator",
-      "Stick It to the Stickman",
-      "Scratch It! Lucky Cards",
-      "Color Cascade",
-      "Cherry Picking Bot Demo",
-      "Rattle Spring: Overture",
-      "spider cat",
-      "Lucky Claw",
-      "dimraeth",
-      "SILENT HILL: Townfall",
-      "Halloween: The Game",
-      "Otterly Lost",
-      "Gladio Mori",
-      "Tidy Up History",
-      "Delirescent",
-      "Cat Shoot to Move",
-      "Pixel Cult v0.1",
-      "Gamma",
-      "Quackyard",
-      "Progress98",
-      "GET RICH QUICK 101",
-      "Hellhop",
-      "O, Your Heavenly Stars!",
-      "STARLINE",
-      "Where's My Hug",
-      "Commandment",
-      "Bowl Big - demo",
-      "Open Doctrines",
-      "Belly Rub DX",
-      "Space Miner",
-      "Rust & Shine",
-      "Beacon Outpost",
-      "Slow Roads",
-      "Ved: Recure",
-      "lily's world XD",
-      "Sniper Dan",
-      "R.I.P. - Reincarnation Insurance Program",
-      "Dungeon Settlers",
-      "Mixed Spirits: Bartender",
-      "Active Matter",
-      "Nuclear Design Bureau",
-      "RIG Riot",
-      "Worming from Home"
+      "+1 Speed Keyboard Lucky Escape",
+      "Food: Run and Battle",
+      "THRORBS",
+      "Rooted",
+      "It's Fine",
+      "Wanderburg",
+      "Scapewatch: Idle MMO",
+      "Welcome to Elderfield",
+      "Museologist: Tidy Up the Museum!",
+      "DinoBones: Tidy Up the Museum",
+      "CodeQuest — Small Studio",
+      "Late Shadows",
+      "Iron Frontier",
+      "Mop Opera",
+      "Cards&Guns",
+      "HORNET SAUNA",
+      "Tidal Typesetter",
+      "Miles left",
+      "Victorum_clickable",
+      "El Bañado De La Estrella",
+      "Thủ Khoa Đầu Thai",
+      "Shadow Loom — PICO-1K",
+      "WarStoppable",
+      "Orders of Far-Falle",
+      "Nodes",
+      "Defenders of Cinderkeep Demo",
+      "The Royal Ball",
+      "Kiwi • Oranges • Kiwi (Handheld Edition)",
+      "Rill",
+      "priiism",
+      "The Lady At my Bedframe Vol.1",
+      "Newgrounds Gijinka Collab: 3GX Edition",
+      "Zombie locked!? 🧟‍♀️",
+      "Lucario's Smash Life Episode 13",
+      "YU-GI-OH! REANIMATE 2",
+      "Hostage Heart",
+      "まるかいてドカン! / Maru Kaite Dokan!",
+      "Aura Farmer",
+      "The Interview",
+      "Rags of Racs",
+      "Escape from Vlogger: Runaway",
+      "Cricket Smash 3D",
+      "Sharpest Spear",
+      "OpenFront",
+      "Mini Miner",
+      "Incremental Pain Profit",
+      "Fish Fishing",
+      "Sapphic Tactics",
+      "Toss Office",
+      "Last Hope: Zombie Autobattler",
+      "Escape From Friend's House",
+      "SkillTeam (Amstrad CPC)",
+      "Containment Protocol",
+      "Penguin Farm",
+      "Celestial Particles",
+      "Deep Digger",
+      "Incremental Donuts",
+      "Skelly Shift DX (Game Boy Color)",
+      "Scarlet Skips",
+      "Kernel Hearts",
+      "Driving Rogue",
+      "CONTROL Resonant",
+      "Asgard's Fall — Viking Survivors",
+      "FRUKT",
+      "Aniimo",
+      "Idle Progress Bar MMO",
+      "Sigilsmith",
+      "RPG In Another World",
+      "Little Big Space Clicker",
+      "Dungeonlings",
+      "CatalystCore",
+      "GRIDMINE",
+      "DevilTrade",
+      "DAROMA",
+      "Not a Trolley Problem",
+      "Placement",
+      "Just Keep Defending And Mining",
+      "Mars Attracts",
+      "Dragon Shelter",
+      "SiN Reloaded",
+      "HIROTONFA’s American Revolution Smuggler",
+      "Garfield - Escape from Monday",
+      "Dawson Oaks Trailer Park",
+      "Another Eden Begins",
+      "Batomon Showdown",
+      "RuneScape: Dragonwilds",
+      "Alchemy Factory",
+      "Creator Chronicles",
+      "Mortal Shell II",
+      "Pax Autocratica"
     ],
-    "ranAt": "2026-09-27T05:26:28.998Z"
+    "ranAt": "2026-09-28T05:33:24.308Z"
   },
   "evidenceSeoFallback": {
     "enabled": true,
     "limit": 180,
-    "pendingCount": 2282,
+    "pendingCount": 2278,
     "eligibleCount": 0,
     "queueSize": 0,
     "verified": 0,
@@ -420,7 +421,7 @@
       "pending": 0
     },
     "verifiedNames": [],
-    "ranAt": "2026-09-27T05:26:29.746Z"
+    "ranAt": "2026-09-28T05:33:24.884Z"
   },
   "socialBuzzVerification": {
     "modelVersion": 3,
@@ -442,10 +443,10 @@
       "x": 0,
       "tiktok": 0
     },
-    "ranAt": "2026-09-27T05:26:30.910Z"
+    "ranAt": "2026-09-28T05:33:25.842Z"
   },
   "serpApiAccountStatus": {
-    "checkedAt": "2026-09-27T05:26:31.173Z",
+    "checkedAt": "2026-09-28T05:33:26.023Z",
     "accountApiConsumesSearchCredits": false,
     "configuredKeys": 1,
     "workingKeys": 1,
@@ -482,7 +483,7 @@
         "planSearchesLeft": 5,
         "totalSearchesLeft": 5,
         "rateLimitPerHour": 250,
-        "checkedAt": "2026-09-27T05:26:31.172Z",
+        "checkedAt": "2026-09-28T05:33:26.022Z",
         "sharedAccount": false,
         "sharedWithSlots": []
       },
@@ -552,12 +553,12 @@
       "pending": 0
     },
     "pendingByTier": {
-      "strong": 136,
-      "secondary": 160,
+      "strong": 133,
+      "secondary": 162,
       "strategic": 38
     },
     "pendingByChannel": {
-      "online": 272,
+      "online": 271,
       "wiki": 62
     },
     "verifiedNames": [],
@@ -582,7 +583,7 @@
         "quotaStopped": false
       }
     },
-    "ranAt": "2026-09-27T05:26:31.793Z"
+    "ranAt": "2026-09-28T05:33:26.551Z"
   },
   "serpApiConfiguredSlots": 1,
   "serpApiPoolUsage": {
@@ -590,7 +591,7 @@
     "configuredSlots": 1,
     "month": "2026-09",
     "monthUsed": 245,
-    "day": "2026-09-27",
+    "day": "2026-09-28",
     "dayUsed": 0,
     "monthlyLimit": 245,
     "dailyLimit": 245,
@@ -604,7 +605,7 @@
         "updatedAt": "2026-09-15T05:08:23.138Z"
       }
     },
-    "updatedAt": "2026-09-27T05:26:31.839Z"
+    "updatedAt": "2026-09-28T05:33:26.609Z"
   },
   "searchApiConfigured": false,
   "searchApiTrendsUsage": {
@@ -637,16 +638,16 @@
       "strategic": 0
     },
     "pendingByChannel": {
-      "online": 272,
+      "online": 271,
       "wiki": 62
     },
     "pendingByTier": {
-      "strong": 136,
-      "secondary": 160,
+      "strong": 133,
+      "secondary": 162,
       "strategic": 38
     },
     "verifiedNames": [],
     "errorNames": [],
-    "ranAt": "2026-09-27T05:26:32.370Z"
+    "ranAt": "2026-09-28T05:33:27.030Z"
   }
 }
