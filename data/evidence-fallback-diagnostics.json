@@ -1,49 +1,52 @@
 {
-  "generatedAt": "2026-09-29T05:51:20.139Z",
+  "generatedAt": "2026-09-30T05:41:30.489Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2271,
+  "pendingSeo": 2262,
   "channelCounts": {
-    "pending": 415,
-    "online": 1856
+    "pending": 414,
+    "online": 1847,
+    "wiki": 1
   },
   "fastClassCounts": {
-    "pending:pending": 415,
-    "online:pending": 1856
+    "pending:pending": 414,
+    "online:pending": 1847,
+    "wiki:pending": 1
   },
   "strategicCounts": {
     "pending:0": 399,
-    "online:2": 206,
+    "online:2": 197,
     "online:1": 1650,
-    "pending:1": 16
+    "pending:1": 15,
+    "wiki:1": 1
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1824
+      "count": 1815
     },
     {
       "id": "itch-newest-web",
-      "count": 1816
+      "count": 1807
     },
     {
       "id": "itch-new-feed",
-      "count": 1774
+      "count": 1765
     },
     {
       "id": "trends-rising-7d",
-      "count": 334
+      "count": 335
     },
     {
       "id": "trends-rising-30d",
-      "count": 215
+      "count": 217
     },
     {
       "id": "itch-new-popular-web",
-      "count": 181
+      "count": 172
     },
     {
       "id": "itch-popular",
-      "count": 181
+      "count": 172
     },
     {
       "id": "trends-rising-7d-horror-game",
@@ -51,7 +54,7 @@
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 120
+      "count": 122
     },
     {
       "id": "trends-rising-7d-indie-game",
@@ -59,7 +62,7 @@
     },
     {
       "id": "trends-rising-7d-itch-io",
-      "count": 77
+      "count": 78
     },
     {
       "id": "trends-rising-30d-indie-game",
@@ -87,11 +90,11 @@
     },
     {
       "id": "itch-featured-feed",
-      "count": 18
+      "count": 17
     },
     {
       "id": "itch-featured",
-      "count": 18
+      "count": 17
     },
     {
       "id": "steam-latest-indie",
@@ -107,7 +110,7 @@
     },
     {
       "id": "steam-popular-new",
-      "count": 2
+      "count": 3
     },
     {
       "id": "lagged-new",
