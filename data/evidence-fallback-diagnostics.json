@@ -1,25 +1,25 @@
 {
-  "generatedAt": "2026-10-02T05:49:28.606Z",
+  "generatedAt": "2026-10-03T05:25:09.779Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2229,
+  "pendingSeo": 2262,
   "channelCounts": {
-    "pending": 418,
-    "online": 1811
+    "pending": 430,
+    "online": 1832
   },
   "fastClassCounts": {
-    "pending:pending": 418,
-    "online:pending": 1811
+    "pending:pending": 430,
+    "online:pending": 1832
   },
   "strategicCounts": {
-    "pending:0": 402,
-    "online:2": 161,
-    "online:1": 1650,
-    "pending:1": 16
+    "pending:0": 411,
+    "online:2": 162,
+    "online:1": 1670,
+    "pending:1": 19
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1779
+      "count": 1784
     },
     {
       "id": "itch-newest-web",
@@ -27,31 +27,31 @@
     },
     {
       "id": "itch-new-feed",
-      "count": 1729
+      "count": 1734
     },
     {
       "id": "trends-rising-7d",
-      "count": 337
+      "count": 340
     },
     {
       "id": "trends-rising-30d",
-      "count": 221
+      "count": 223
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 173
+      "count": 176
     },
     {
       "id": "itch-new-popular-web",
-      "count": 136
+      "count": 154
     },
     {
       "id": "itch-popular",
-      "count": 136
+      "count": 154
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 123
+      "count": 124
     },
     {
       "id": "trends-rising-7d-indie-game",
@@ -63,11 +63,19 @@
     },
     {
       "id": "trends-rising-30d-indie-game",
-      "count": 52
+      "count": 53
     },
     {
       "id": "trends-rising-30d-itch-io",
       "count": 51
+    },
+    {
+      "id": "newgrounds-daily-top",
+      "count": 30
+    },
+    {
+      "id": "newgrounds-top",
+      "count": 30
     },
     {
       "id": "newgrounds-latest",
@@ -78,32 +86,24 @@
       "count": 29
     },
     {
-      "id": "newgrounds-daily-top",
-      "count": 27
-    },
-    {
-      "id": "newgrounds-top",
-      "count": 27
-    },
-    {
       "id": "itch-featured-feed",
-      "count": 18
+      "count": 21
     },
     {
       "id": "itch-featured",
-      "count": 18
+      "count": 21
     },
     {
       "id": "steam-latest-indie",
-      "count": 7
+      "count": 8
     },
     {
       "id": "steam-new",
-      "count": 7
+      "count": 8
     },
     {
       "id": "y8-new",
-      "count": 5
+      "count": 6
     },
     {
       "id": "steam-popular-new",
@@ -115,6 +115,26 @@
     }
   ],
   "samples": [
+    {
+      "name": "Brick by Brick",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 2,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 6,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "steam-latest-indie",
+        "steam-new",
+        "y8-new"
+      ]
+    },
     {
       "name": "Eat not, Want not",
       "channel": "online",
@@ -1026,25 +1046,6 @@
     },
     {
       "name": "The Last Wand",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 6,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "The Fairview Effect",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
