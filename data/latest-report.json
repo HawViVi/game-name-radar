@@ -1,23 +1,23 @@
 {
-  "scannedAt": "2026-10-03T05:24:23.560Z",
+  "scannedAt": "2026-10-04T06:00:12.278Z",
   "targetMarket": "US_GLOBAL",
   "primaryMarket": "US",
   "referenceMarket": "WORLDWIDE",
-  "totalAdded": 261,
+  "totalAdded": 177,
   "sources": [
     {
       "ok": true,
       "sourceId": "itch-newest-web",
       "sourceName": "itch.io 最新网页游戏",
       "total": 36,
-      "added": 36
+      "added": 35
     },
     {
       "ok": true,
       "sourceId": "itch-new-popular-web",
       "sourceName": "itch.io New & Popular",
       "total": 36,
-      "added": 6
+      "added": 5
     },
     {
       "ok": true,
@@ -31,28 +31,28 @@
       "sourceId": "itch-featured-feed",
       "sourceName": "itch.io Featured Feed",
       "total": 10,
-      "added": 3
+      "added": 2
     },
     {
       "ok": true,
       "sourceId": "steam-top-wishlist",
       "sourceName": "Steam Top Wishlists",
       "total": 49,
-      "added": 0
+      "added": 1
     },
     {
       "ok": true,
       "sourceId": "steam-popular-new",
       "sourceName": "Steam 热门新发行",
       "total": 50,
-      "added": 6
+      "added": 4
     },
     {
       "ok": true,
       "sourceId": "steam-latest-indie",
       "sourceName": "Steam 最新独立游戏",
       "total": 50,
-      "added": 49
+      "added": 23
     },
     {
       "ok": true,
@@ -73,21 +73,21 @@
       "sourceId": "crazygames-new",
       "sourceName": "CrazyGames 新游戏",
       "total": 70,
-      "added": 1
+      "added": 0
     },
     {
       "ok": true,
       "sourceId": "poki-new",
       "sourceName": "Poki 新游戏",
-      "total": 162,
-      "added": 22
+      "total": 142,
+      "added": 2
     },
     {
       "ok": true,
       "sourceId": "y8-new",
       "sourceName": "Y8 新游戏",
       "total": 73,
-      "added": 45
+      "added": 39
     },
     {
       "ok": false,
@@ -100,49 +100,47 @@
       "sourceId": "lagged-new",
       "sourceName": "Lagged 新游戏",
       "total": 82,
-      "added": 5
+      "added": 6
     },
     {
       "ok": true,
       "sourceId": "trends-rising-7d-itch-io",
       "sourceName": "Trends上涨 7天 · itch io",
-      "total": 16,
-      "added": 10
+      "total": 7,
+      "added": 3
     },
     {
       "ok": true,
       "sourceId": "trends-rising-30d-itch-io",
       "sourceName": "Trends上涨 30天 · itch io",
-      "total": 18,
-      "added": 8
+      "total": 14,
+      "added": 3
     },
     {
       "ok": true,
       "sourceId": "trends-rising-7d-indie-game",
       "sourceName": "Trends上涨 7天 · indie game",
-      "total": 1,
+      "total": 2,
       "added": 1
     },
     {
       "ok": true,
       "sourceId": "trends-rising-30d-indie-game",
       "sourceName": "Trends上涨 30天 · indie game",
-      "total": 3,
-      "added": 1
+      "total": 2,
+      "added": 0
     },
     {
-      "ok": true,
+      "ok": false,
       "sourceId": "trends-rising-7d-horror-game",
       "sourceName": "Trends上涨 7天 · horror game",
-      "total": 14,
-      "added": 8
+      "error": "Unexpected token '<', \"<html lang\"... is not valid JSON"
     },
     {
-      "ok": true,
+      "ok": false,
       "sourceId": "trends-rising-30d-horror-game",
       "sourceName": "Trends上涨 30天 · horror game",
-      "total": 19,
-      "added": 7
+      "error": "Unexpected token '<', \"<html lang\"... is not valid JSON"
     }
   ],
   "robloxDiscovery": {
@@ -165,14 +163,14 @@
       "weak": 0
     },
     "errors": [],
-    "generatedAt": "2026-10-03T05:24:23.560Z"
+    "generatedAt": "2026-10-04T06:00:12.278Z"
   },
-  "seoVerified": 18,
+  "seoVerified": 0,
   "seoErrors": 0,
   "fastModelVersion": 3,
   "fastPassedCount": 246,
-  "fastWatchCount": 283,
-  "fastRejectedCount": 209,
+  "fastWatchCount": 278,
+  "fastRejectedCount": 201,
   "youtubeEnabled": false,
   "youtubeConfigured": false,
   "youtubeVerified": 0,
@@ -184,7 +182,7 @@
   "risingDiscoveryRan": true,
   "seoModelVersion": 5,
   "trendModelVersion": 4,
-  "seoPassedCount": 493,
+  "seoPassedCount": 494,
   "trendEligibleCount": 183,
   "trendPendingCount": 183,
   "trendValidatedCount": 286,
@@ -194,9 +192,9 @@
     "independent": 0,
     "test-now": 0,
     "page": 2,
-    "watch": 493,
-    "reject": 14,
-    "pending": 2491,
+    "watch": 490,
+    "reject": 0,
+    "pending": 2508,
     "error": 0
   },
   "trendProvider": "serpapi",
@@ -208,7 +206,7 @@
     "enabled": true,
     "month": "2026-10",
     "monthUsed": 245,
-    "day": "2026-10-03",
+    "day": "2026-10-04",
     "dayUsed": 0,
     "monthlyLimit": 245,
     "dailyLimit": 245,
@@ -216,7 +214,7 @@
   },
   "apifyConfigured": false,
   "apifyAccountStatus": {
-    "checkedAt": "2026-10-03T05:24:22.290Z",
+    "checkedAt": "2026-10-04T06:00:11.488Z",
     "configured": false,
     "ok": false,
     "provider": "apify",
@@ -234,7 +232,7 @@
   },
   "seoProvider": "serper-google-search",
   "seoProviderCounts": {
-    "serper+autocomplete": 541,
+    "serper+autocomplete": 527,
     "evidence-fallback": 104,
     "duckduckgo+autocomplete": 95
   },
@@ -242,18 +240,18 @@
   "serperUsage": {
     "enabled": true,
     "totalUsed": 1548,
-    "day": "2026-10-03",
-    "dayUsed": 18,
+    "day": "2026-10-04",
+    "dayUsed": 0,
     "totalLimit": 2450,
     "dailyLimit": 2450,
-    "updatedAt": "2026-10-03T05:25:09.361Z",
+    "updatedAt": "2026-10-04T06:00:40.111Z",
     "lastError": "Not enough credits"
   },
   "googleCseConfiguredSlots": 0,
   "googleCseUsage": {
     "enabled": false,
     "configuredSlots": 0,
-    "day": "2026-10-03",
+    "day": "2026-10-04",
     "totalDayUsed": 0,
     "totalDailyLimit": 0,
     "slots": {},
@@ -265,27 +263,27 @@
   },
   "siteTypeModelVersion": 2,
   "siteTypeCounts": {
-    "online": 2295,
-    "wiki": 174,
-    "pending": 531
+    "online": 2292,
+    "wiki": 178,
+    "pending": 530
   },
   "wikiPrelaunchModelVersion": 2,
   "wikiPrelaunchCounts": {
     "priority": 0,
     "prepare": 4,
     "watch": 9,
-    "weak": 161
+    "weak": 165
   },
   "todayReview": {
     "modelVersion": 2,
     "selectedCount": 5,
-    "candidateCount": 191,
+    "candidateCount": 186,
     "laneCounts": {
-      "confirmed-acceleration": 4,
-      "fresh-platform-growth": 1,
+      "confirmed-acceleration": 5,
+      "fresh-platform-growth": 0,
       "roblox-growth": 0
     },
-    "generatedAt": "2026-10-03T05:25:13.371Z"
+    "generatedAt": "2026-10-04T06:00:42.586Z"
   },
   "serperVerification": {
     "rushMode": true,
@@ -299,59 +297,38 @@
     "onlineLimit": 63,
     "wikiLimit": 27,
     "queueSize": 90,
-    "verified": 18,
+    "verified": 0,
     "verifiedByChannel": {
-      "online": 12,
-      "wiki": 6,
+      "online": 0,
+      "wiki": 0,
       "pending": 0
     },
     "errors": 0,
     "quotaStopped": true,
-    "verifiedNames": [
-      "Remember",
-      "Songs of Glimmerwick",
-      "Bike Obby Draw Pencil",
-      "Food: Run and Battle",
-      "Steam Frame",
-      "DUAL PROTOCOL: The Case of Eva & Miles",
-      "Quasimorph",
-      "Welcome to Elderfield",
-      "Hello, Privet!",
-      "Tụ Linh Quyết",
-      "NEON DIRT: TOKYO AFTER HOURS",
-      "Sprunki Shiftposwapped",
-      "Long Pig",
-      "The Sinking City 2",
-      "PINBAWL",
-      "Meettryoshka",
-      "Something In The Dark",
-      "Fanteatral"
-    ],
-    "ranAt": "2026-10-03T05:25:09.502Z"
+    "verifiedNames": [],
+    "ranAt": "2026-10-04T06:00:40.176Z"
   },
   "evidenceSeoFallback": {
     "enabled": true,
     "limit": 180,
-    "pendingCount": 2262,
-    "eligibleCount": 1,
-    "queueSize": 1,
-    "verified": 1,
+    "pendingCount": 2275,
+    "eligibleCount": 0,
+    "queueSize": 0,
+    "verified": 0,
     "channelVerified": {
-      "online": 1,
+      "online": 0,
       "wiki": 0,
       "pending": 0
     },
     "fastRecalculated": {
-      "pass": 1,
+      "pass": 0,
       "watch": 0,
       "weak": 0,
       "reject": 0,
       "pending": 0
     },
-    "verifiedNames": [
-      "Brick by Brick"
-    ],
-    "ranAt": "2026-10-03T05:25:10.208Z"
+    "verifiedNames": [],
+    "ranAt": "2026-10-04T06:00:40.578Z"
   },
   "socialBuzzVerification": {
     "modelVersion": 3,
@@ -373,10 +350,10 @@
       "x": 0,
       "tiktok": 0
     },
-    "ranAt": "2026-10-03T05:25:11.431Z"
+    "ranAt": "2026-10-04T06:00:41.326Z"
   },
   "serpApiAccountStatus": {
-    "checkedAt": "2026-10-03T05:25:11.584Z",
+    "checkedAt": "2026-10-04T06:00:41.559Z",
     "accountApiConsumesSearchCredits": false,
     "configuredKeys": 1,
     "workingKeys": 1,
@@ -413,7 +390,7 @@
         "planSearchesLeft": 0,
         "totalSearchesLeft": 0,
         "rateLimitPerHour": 250,
-        "checkedAt": "2026-10-03T05:25:11.583Z",
+        "checkedAt": "2026-10-04T06:00:41.559Z",
         "sharedAccount": false,
         "sharedWithSlots": []
       },
@@ -483,13 +460,13 @@
       "pending": 0
     },
     "pendingByTier": {
-      "strong": 125,
-      "secondary": 166,
+      "strong": 124,
+      "secondary": 165,
       "strategic": 39
     },
     "pendingByChannel": {
-      "online": 274,
-      "wiki": 56
+      "online": 273,
+      "wiki": 55
     },
     "verifiedNames": [],
     "caps": {
@@ -513,7 +490,7 @@
         "quotaStopped": false
       }
     },
-    "ranAt": "2026-10-03T05:25:12.231Z"
+    "ranAt": "2026-10-04T06:00:41.914Z"
   },
   "serpApiConfiguredSlots": 1,
   "serpApiPoolUsage": {
@@ -521,7 +498,7 @@
     "configuredSlots": 1,
     "month": "2026-10",
     "monthUsed": 245,
-    "day": "2026-10-03",
+    "day": "2026-10-04",
     "dayUsed": 0,
     "monthlyLimit": 245,
     "dailyLimit": 245,
@@ -535,7 +512,7 @@
         "updatedAt": "2026-10-01T06:10:24.626Z"
       }
     },
-    "updatedAt": "2026-10-03T05:25:12.283Z"
+    "updatedAt": "2026-10-04T06:00:42.000Z"
   },
   "searchApiConfigured": false,
   "searchApiTrendsUsage": {
@@ -568,16 +545,16 @@
       "strategic": 0
     },
     "pendingByChannel": {
-      "online": 274,
-      "wiki": 56
+      "online": 273,
+      "wiki": 55
     },
     "pendingByTier": {
-      "strong": 125,
-      "secondary": 166,
+      "strong": 124,
+      "secondary": 165,
       "strategic": 39
     },
     "verifiedNames": [],
     "errorNames": [],
-    "ranAt": "2026-10-03T05:25:12.836Z"
+    "ranAt": "2026-10-04T06:00:42.298Z"
   }
 }
