@@ -1,36 +1,36 @@
 {
-  "generatedAt": "2026-10-07T06:08:11.221Z",
+  "generatedAt": "2026-10-08T06:13:51.650Z",
   "totalCandidates": 3000,
   "pendingSeo": 2271,
   "channelCounts": {
     "pending": 417,
-    "online": 1850,
-    "wiki": 4
+    "wiki": 4,
+    "online": 1850
   },
   "fastClassCounts": {
     "pending:pending": 417,
-    "online:pending": 1850,
-    "wiki:pending": 4
+    "wiki:pending": 4,
+    "online:pending": 1850
   },
   "strategicCounts": {
-    "pending:0": 416,
-    "online:2": 164,
-    "online:1": 1686,
-    "pending:1": 1,
-    "wiki:1": 4
+    "pending:0": 415,
+    "wiki:1": 4,
+    "online:2": 167,
+    "online:1": 1683,
+    "pending:1": 2
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1816
+      "count": 1814
     },
     {
       "id": "itch-newest-web",
-      "count": 1808
+      "count": 1806
     },
     {
       "id": "itch-new-feed",
-      "count": 1766
+      "count": 1764
     },
     {
       "id": "trends-rising-7d",
@@ -38,7 +38,7 @@
     },
     {
       "id": "trends-rising-30d",
-      "count": 228
+      "count": 229
     },
     {
       "id": "trends-rising-7d-horror-game",
@@ -46,11 +46,11 @@
     },
     {
       "id": "itch-new-popular-web",
-      "count": 139
+      "count": 141
     },
     {
       "id": "itch-popular",
-      "count": 139
+      "count": 141
     },
     {
       "id": "trends-rising-30d-horror-game",
@@ -70,7 +70,7 @@
     },
     {
       "id": "trends-rising-30d-itch-io",
-      "count": 51
+      "count": 52
     },
     {
       "id": "newgrounds-latest",
@@ -82,42 +82,60 @@
     },
     {
       "id": "newgrounds-daily-top",
-      "count": 27
+      "count": 28
     },
     {
       "id": "newgrounds-top",
-      "count": 27
+      "count": 28
     },
     {
       "id": "steam-latest-indie",
-      "count": 7
+      "count": 8
     },
     {
       "id": "steam-new",
-      "count": 7
-    },
-    {
-      "id": "steam-popular-new",
-      "count": 6
+      "count": 8
     },
     {
       "id": "itch-featured-feed",
-      "count": 5
+      "count": 6
     },
     {
       "id": "itch-featured",
-      "count": 5
+      "count": 6
     },
     {
       "id": "y8-new",
+      "count": 6
+    },
+    {
+      "id": "steam-popular-new",
       "count": 5
     },
     {
       "id": "lagged-new",
-      "count": 2
+      "count": 3
     }
   ],
   "samples": [
+    {
+      "name": "Yes, Comrade.",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 2,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 4,
+      "sourceIds": [
+        "itch-new-popular-web",
+        "itch-popular",
+        "newgrounds-daily-top",
+        "newgrounds-top"
+      ]
+    },
     {
       "name": "Alpine",
       "channel": "online",
@@ -141,7 +159,7 @@
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
-      "discoveryScore": 17,
+      "discoveryScore": 15,
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 5,
@@ -1040,25 +1058,6 @@
       "sourceIds": [
         "itch-newest-web",
         "itch-new",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Idle Guitar Legend",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 6,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
         "itch-new-popular-web",
         "itch-popular"
       ]
