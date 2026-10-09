@@ -1,44 +1,45 @@
 {
-  "generatedAt": "2026-10-08T06:13:51.650Z",
+  "generatedAt": "2026-10-09T06:17:08.244Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2271,
+  "pendingSeo": 2268,
   "channelCounts": {
     "pending": 417,
-    "wiki": 4,
-    "online": 1850
+    "online": 1839,
+    "wiki": 12
   },
   "fastClassCounts": {
     "pending:pending": 417,
-    "wiki:pending": 4,
-    "online:pending": 1850
+    "online:pending": 1839,
+    "wiki:pending": 12
   },
   "strategicCounts": {
     "pending:0": 415,
-    "wiki:1": 4,
-    "online:2": 167,
-    "online:1": 1683,
-    "pending:1": 2
+    "online:2": 168,
+    "online:1": 1671,
+    "wiki:2": 1,
+    "pending:1": 2,
+    "wiki:1": 11
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1814
+      "count": 1804
     },
     {
       "id": "itch-newest-web",
-      "count": 1806
+      "count": 1796
     },
     {
       "id": "itch-new-feed",
-      "count": 1764
+      "count": 1753
     },
     {
       "id": "trends-rising-7d",
-      "count": 348
+      "count": 347
     },
     {
       "id": "trends-rising-30d",
-      "count": 229
+      "count": 228
     },
     {
       "id": "trends-rising-7d-horror-game",
@@ -46,11 +47,11 @@
     },
     {
       "id": "itch-new-popular-web",
-      "count": 141
+      "count": 142
     },
     {
       "id": "itch-popular",
-      "count": 141
+      "count": 142
     },
     {
       "id": "trends-rising-30d-horror-game",
@@ -62,7 +63,7 @@
     },
     {
       "id": "trends-rising-7d-itch-io",
-      "count": 81
+      "count": 80
     },
     {
       "id": "trends-rising-30d-indie-game",
@@ -70,7 +71,7 @@
     },
     {
       "id": "trends-rising-30d-itch-io",
-      "count": 52
+      "count": 51
     },
     {
       "id": "newgrounds-latest",
@@ -82,19 +83,23 @@
     },
     {
       "id": "newgrounds-daily-top",
-      "count": 28
+      "count": 27
     },
     {
       "id": "newgrounds-top",
-      "count": 28
+      "count": 27
+    },
+    {
+      "id": "steam-popular-new",
+      "count": 14
     },
     {
       "id": "steam-latest-indie",
-      "count": 8
+      "count": 9
     },
     {
       "id": "steam-new",
-      "count": 8
+      "count": 9
     },
     {
       "id": "itch-featured-feed",
@@ -106,34 +111,39 @@
     },
     {
       "id": "y8-new",
-      "count": 6
-    },
-    {
-      "id": "steam-popular-new",
       "count": 5
     },
     {
       "id": "lagged-new",
-      "count": 3
+      "count": 2
+    },
+    {
+      "id": "crazygames-new",
+      "count": 1
+    },
+    {
+      "id": "poki-new",
+      "count": 1
     }
   ],
   "samples": [
     {
-      "name": "Yes, Comrade.",
+      "name": "Escape the Ejection",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 2,
+      "discoveryScore": 17,
+      "platforms": 1,
       "browserPlayable": true,
-      "nameRisk": 0,
+      "nameRisk": 6,
       "strategicCount": 2,
-      "sourceCount": 4,
+      "sourceCount": 5,
       "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
         "itch-new-popular-web",
-        "itch-popular",
-        "newgrounds-daily-top",
-        "newgrounds-top"
+        "itch-popular"
       ]
     },
     {
@@ -141,7 +151,7 @@
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
-      "discoveryScore": 17,
+      "discoveryScore": 15,
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 5,
