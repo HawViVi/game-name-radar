@@ -1,61 +1,61 @@
 {
-  "generatedAt": "2026-10-09T06:17:08.244Z",
+  "generatedAt": "2026-10-10T06:00:01.736Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2268,
+  "pendingSeo": 2266,
   "channelCounts": {
-    "pending": 417,
-    "online": 1839,
-    "wiki": 12
+    "pending": 419,
+    "online": 1828,
+    "wiki": 19
   },
   "fastClassCounts": {
-    "pending:pending": 417,
-    "online:pending": 1839,
-    "wiki:pending": 12
+    "pending:pending": 419,
+    "online:pending": 1828,
+    "wiki:pending": 19
   },
   "strategicCounts": {
-    "pending:0": 415,
-    "online:2": 168,
-    "online:1": 1671,
+    "pending:0": 417,
+    "online:2": 169,
+    "online:1": 1659,
     "wiki:2": 1,
     "pending:1": 2,
-    "wiki:1": 11
+    "wiki:1": 18
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1804
+      "count": 1793
     },
     {
       "id": "itch-newest-web",
-      "count": 1796
+      "count": 1785
     },
     {
       "id": "itch-new-feed",
-      "count": 1753
+      "count": 1742
     },
     {
       "id": "trends-rising-7d",
-      "count": 347
+      "count": 349
     },
     {
       "id": "trends-rising-30d",
-      "count": 228
+      "count": 230
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 181
+      "count": 182
     },
     {
       "id": "itch-new-popular-web",
-      "count": 142
+      "count": 144
     },
     {
       "id": "itch-popular",
-      "count": 142
+      "count": 144
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 129
+      "count": 131
     },
     {
       "id": "trends-rising-7d-indie-game",
@@ -63,7 +63,7 @@
     },
     {
       "id": "trends-rising-7d-itch-io",
-      "count": 80
+      "count": 81
     },
     {
       "id": "trends-rising-30d-indie-game",
@@ -91,7 +91,7 @@
     },
     {
       "id": "steam-popular-new",
-      "count": 14
+      "count": 21
     },
     {
       "id": "steam-latest-indie",
@@ -103,11 +103,11 @@
     },
     {
       "id": "itch-featured-feed",
-      "count": 6
+      "count": 7
     },
     {
       "id": "itch-featured",
-      "count": 6
+      "count": 7
     },
     {
       "id": "y8-new",
@@ -116,23 +116,52 @@
     {
       "id": "lagged-new",
       "count": 2
-    },
-    {
-      "id": "crazygames-new",
-      "count": 1
-    },
-    {
-      "id": "poki-new",
-      "count": 1
     }
   ],
   "samples": [
+    {
+      "name": "Battle Healer Hildegard",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 17,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 6,
+      "strategicCount": 2,
+      "sourceCount": 4,
+      "sourceIds": [
+        "itch-new-popular-web",
+        "itch-popular",
+        "itch-featured-feed",
+        "itch-featured"
+      ]
+    },
+    {
+      "name": "Missile Stream",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
     {
       "name": "Escape the Ejection",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
-      "discoveryScore": 17,
+      "discoveryScore": 15,
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 6,
@@ -1031,43 +1060,6 @@
         "itch-newest-web",
         "itch-new",
         "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Styx and Bones",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 6,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Scam Artist - Prototype",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 0,
-      "strategicCount": 2,
-      "sourceCount": 4,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
         "itch-new-popular-web",
         "itch-popular"
       ]
