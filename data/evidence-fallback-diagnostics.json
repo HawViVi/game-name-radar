@@ -1,40 +1,41 @@
 {
-  "generatedAt": "2026-10-12T06:07:05.759Z",
+  "generatedAt": "2026-10-13T06:51:58.772Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2263,
+  "pendingSeo": 2262,
   "channelCounts": {
-    "wiki": 1,
     "pending": 423,
-    "online": 1839
+    "online": 1831,
+    "wiki": 8
   },
   "fastClassCounts": {
-    "wiki:pending": 1,
     "pending:pending": 423,
-    "online:pending": 1839
+    "online:pending": 1831,
+    "wiki:pending": 8
   },
   "strategicCounts": {
-    "wiki:1": 1,
     "pending:0": 422,
-    "online:2": 169,
-    "online:1": 1670,
-    "pending:1": 1
+    "online:2": 171,
+    "online:1": 1660,
+    "wiki:2": 2,
+    "pending:1": 1,
+    "wiki:1": 6
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1804
+      "count": 1794
     },
     {
       "id": "itch-newest-web",
-      "count": 1796
+      "count": 1786
     },
     {
       "id": "itch-new-feed",
-      "count": 1753
+      "count": 1742
     },
     {
       "id": "trends-rising-7d",
-      "count": 355
+      "count": 354
     },
     {
       "id": "trends-rising-30d",
@@ -42,15 +43,15 @@
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 187
+      "count": 186
     },
     {
       "id": "itch-new-popular-web",
-      "count": 144
+      "count": 145
     },
     {
       "id": "itch-popular",
-      "count": 144
+      "count": 145
     },
     {
       "id": "trends-rising-30d-horror-game",
@@ -89,41 +90,59 @@
       "count": 27
     },
     {
+      "id": "steam-popular-new",
+      "count": 10
+    },
+    {
       "id": "steam-latest-indie",
-      "count": 8
+      "count": 10
     },
     {
       "id": "steam-new",
-      "count": 8
+      "count": 10
     },
     {
       "id": "itch-featured-feed",
-      "count": 6
+      "count": 7
     },
     {
       "id": "itch-featured",
-      "count": 6
+      "count": 7
     },
     {
       "id": "y8-new",
-      "count": 5
-    },
-    {
-      "id": "steam-popular-new",
-      "count": 3
+      "count": 6
     },
     {
       "id": "lagged-new",
-      "count": 2
+      "count": 3
     }
   ],
   "samples": [
+    {
+      "name": "ROTETRA",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 17,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 5,
+      "strategicCount": 2,
+      "sourceCount": 4,
+      "sourceIds": [
+        "itch-new-popular-web",
+        "itch-popular",
+        "itch-featured-feed",
+        "itch-featured"
+      ]
+    },
     {
       "name": "Battle Healer Hildegard",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
-      "discoveryScore": 17,
+      "discoveryScore": 15,
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 6,
@@ -1027,25 +1046,6 @@
     },
     {
       "name": "A Shock of Dimension (Demo out!)",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 6,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Dwarves: Idle Battles",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
