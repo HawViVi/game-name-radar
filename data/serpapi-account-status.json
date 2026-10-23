@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-22T04:58:25.133Z",
+  "checkedAt": "2026-10-23T04:59:56.198Z",
   "accountApiConsumesSearchCredits": false,
   "configuredKeys": 1,
   "workingKeys": 1,
@@ -36,7 +36,7 @@
       "planSearchesLeft": 250,
       "totalSearchesLeft": 250,
       "rateLimitPerHour": 250,
-      "checkedAt": "2026-10-22T04:58:25.133Z",
+      "checkedAt": "2026-10-23T04:59:56.197Z",
       "sharedAccount": false,
       "sharedWithSlots": []
     },
