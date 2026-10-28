@@ -1,50 +1,49 @@
 {
-  "generatedAt": "2026-10-27T05:13:33.544Z",
+  "generatedAt": "2026-10-28T05:51:48.468Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2213,
+  "pendingSeo": 2209,
   "channelCounts": {
-    "pending": 476,
-    "wiki": 10,
-    "online": 1727
+    "pending": 479,
+    "wiki": 21,
+    "online": 1709
   },
   "fastClassCounts": {
-    "pending:pending": 476,
-    "wiki:pending": 10,
-    "online:pending": 1727
+    "pending:pending": 479,
+    "wiki:pending": 21,
+    "online:pending": 1709
   },
   "strategicCounts": {
-    "pending:0": 475,
+    "pending:0": 477,
     "wiki:0": 1,
-    "online:1": 1553,
+    "online:1": 1535,
     "online:2": 174,
-    "wiki:2": 1,
-    "pending:1": 1,
-    "wiki:1": 8
+    "wiki:1": 20,
+    "pending:1": 2
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1689
+      "count": 1671
     },
     {
       "id": "itch-newest-web",
-      "count": 1681
+      "count": 1663
     },
     {
       "id": "itch-new-feed",
-      "count": 1637
+      "count": 1619
     },
     {
       "id": "trends-rising-7d",
-      "count": 400
+      "count": 402
     },
     {
       "id": "trends-rising-30d",
-      "count": 269
+      "count": 270
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 210
+      "count": 211
     },
     {
       "id": "trends-rising-30d-horror-game",
@@ -52,15 +51,15 @@
     },
     {
       "id": "itch-new-popular-web",
-      "count": 146
+      "count": 149
     },
     {
       "id": "itch-popular",
-      "count": 146
+      "count": 149
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 111
+      "count": 112
     },
     {
       "id": "trends-rising-7d-itch-io",
@@ -72,7 +71,7 @@
     },
     {
       "id": "trends-rising-30d-indie-game",
-      "count": 54
+      "count": 55
     },
     {
       "id": "newgrounds-latest",
@@ -91,43 +90,94 @@
       "count": 27
     },
     {
-      "id": "steam-latest-indie",
-      "count": 13
-    },
-    {
-      "id": "steam-new",
-      "count": 13
-    },
-    {
       "id": "steam-popular-new",
+      "count": 23
+    },
+    {
+      "id": "steam-latest-indie",
       "count": 12
     },
     {
-      "id": "y8-new",
-      "count": 8
+      "id": "steam-new",
+      "count": 12
     },
     {
       "id": "itch-featured-feed",
-      "count": 7
+      "count": 10
     },
     {
       "id": "itch-featured",
-      "count": 7
+      "count": 10
+    },
+    {
+      "id": "y8-new",
+      "count": 5
     },
     {
       "id": "lagged-new",
-      "count": 3
+      "count": 2
     },
     {
       "id": "steam-top-wishlist",
       "count": 1
-    },
-    {
-      "id": "crazygames-new",
-      "count": 1
     }
   ],
   "samples": [
+    {
+      "name": "Dungeonbound (In Development)",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 17,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 6,
+      "strategicCount": 2,
+      "sourceCount": 4,
+      "sourceIds": [
+        "itch-new-popular-web",
+        "itch-popular",
+        "itch-featured-feed",
+        "itch-featured"
+      ]
+    },
+    {
+      "name": "NOSFER-A-TOOTH",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 17,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 6,
+      "strategicCount": 2,
+      "sourceCount": 4,
+      "sourceIds": [
+        "itch-new-popular-web",
+        "itch-popular",
+        "itch-featured-feed",
+        "itch-featured"
+      ]
+    },
+    {
+      "name": "ギルドの受付が99階らしい",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 23,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
     {
       "name": "ROTETRA",
       "channel": "online",
@@ -998,63 +1048,6 @@
     },
     {
       "name": "Deltarune Chapters 1-5 Web Port",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 9,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Merchants and Rails",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 6,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "667 Phantogoria",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 9,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Zone Idle",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
