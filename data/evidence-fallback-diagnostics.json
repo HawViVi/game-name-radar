@@ -1,41 +1,41 @@
 {
-  "generatedAt": "2026-10-29T05:56:10.884Z",
+  "generatedAt": "2026-10-30T05:57:16.732Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2203,
+  "pendingSeo": 2194,
   "channelCounts": {
-    "pending": 486,
-    "wiki": 25,
-    "online": 1692
+    "pending": 485,
+    "wiki": 28,
+    "online": 1681
   },
   "fastClassCounts": {
-    "pending:pending": 486,
-    "wiki:pending": 25,
-    "online:pending": 1692
+    "pending:pending": 485,
+    "wiki:pending": 28,
+    "online:pending": 1681
   },
   "strategicCounts": {
     "pending:0": 484,
     "wiki:0": 2,
-    "online:2": 174,
-    "online:1": 1518,
-    "wiki:1": 23,
-    "pending:1": 2
+    "online:2": 176,
+    "online:1": 1505,
+    "wiki:1": 26,
+    "pending:1": 1
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1654
+      "count": 1643
     },
     {
       "id": "itch-newest-web",
-      "count": 1646
+      "count": 1635
     },
     {
       "id": "itch-new-feed",
-      "count": 1602
+      "count": 1590
     },
     {
       "id": "trends-rising-7d",
-      "count": 410
+      "count": 411
     },
     {
       "id": "trends-rising-30d",
@@ -51,11 +51,11 @@
     },
     {
       "id": "itch-new-popular-web",
-      "count": 149
+      "count": 150
     },
     {
       "id": "itch-popular",
-      "count": 149
+      "count": 150
     },
     {
       "id": "trends-rising-7d-indie-game",
@@ -63,7 +63,7 @@
     },
     {
       "id": "trends-rising-7d-itch-io",
-      "count": 91
+      "count": 92
     },
     {
       "id": "trends-rising-30d-itch-io",
@@ -75,10 +75,14 @@
     },
     {
       "id": "newgrounds-latest",
-      "count": 29
+      "count": 30
     },
     {
       "id": "newgrounds-new",
+      "count": 30
+    },
+    {
+      "id": "steam-popular-new",
       "count": 29
     },
     {
@@ -90,10 +94,6 @@
       "count": 27
     },
     {
-      "id": "steam-popular-new",
-      "count": 26
-    },
-    {
       "id": "steam-latest-indie",
       "count": 12
     },
@@ -103,11 +103,11 @@
     },
     {
       "id": "itch-featured-feed",
-      "count": 10
+      "count": 9
     },
     {
       "id": "itch-featured",
-      "count": 10
+      "count": 9
     },
     {
       "id": "y8-new",
@@ -123,6 +123,25 @@
     }
   ],
   "samples": [
+    {
+      "name": "Scrap Robot Demo",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 17,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
     {
       "name": "Dungeonbound (In Development)",
       "channel": "online",
@@ -1036,25 +1055,6 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 6,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Deltarune Chapters 1-5 Web Port",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 9,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
