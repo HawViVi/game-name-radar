@@ -1,73 +1,73 @@
 {
-  "generatedAt": "2026-10-31T05:53:18.087Z",
+  "generatedAt": "2026-11-01T06:17:41.360Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2185,
+  "pendingSeo": 2178,
   "channelCounts": {
-    "pending": 496,
-    "wiki": 22,
-    "online": 1667
+    "pending": 499,
+    "wiki": 9,
+    "online": 1670
   },
   "fastClassCounts": {
-    "pending:pending": 496,
-    "wiki:pending": 22,
-    "online:pending": 1667
+    "pending:pending": 499,
+    "wiki:pending": 9,
+    "online:pending": 1670
   },
   "strategicCounts": {
-    "pending:0": 494,
-    "wiki:1": 20,
+    "pending:0": 497,
     "wiki:0": 2,
-    "online:2": 175,
-    "online:1": 1492,
+    "online:1": 1493,
+    "online:2": 177,
+    "wiki:1": 7,
     "pending:1": 2
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1629
+      "count": 1632
     },
     {
       "id": "itch-newest-web",
-      "count": 1621
+      "count": 1624
     },
     {
       "id": "itch-new-feed",
-      "count": 1577
+      "count": 1580
     },
     {
       "id": "trends-rising-7d",
-      "count": 420
+      "count": 422
     },
     {
       "id": "trends-rising-30d",
-      "count": 280
+      "count": 282
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 217
+      "count": 216
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 165
+      "count": 166
     },
     {
       "id": "itch-new-popular-web",
-      "count": 150
+      "count": 151
     },
     {
       "id": "itch-popular",
-      "count": 150
+      "count": 151
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 123
+      "count": 125
     },
     {
       "id": "trends-rising-7d-itch-io",
-      "count": 93
+      "count": 94
     },
     {
       "id": "trends-rising-30d-itch-io",
-      "count": 66
+      "count": 67
     },
     {
       "id": "trends-rising-30d-indie-game",
@@ -90,16 +90,16 @@
       "count": 27
     },
     {
-      "id": "steam-popular-new",
-      "count": 23
-    },
-    {
       "id": "steam-latest-indie",
       "count": 12
     },
     {
       "id": "steam-new",
       "count": 12
+    },
+    {
+      "id": "steam-popular-new",
+      "count": 10
     },
     {
       "id": "itch-featured-feed",
@@ -111,7 +111,7 @@
     },
     {
       "id": "y8-new",
-      "count": 5
+      "count": 6
     },
     {
       "id": "steam-top-wishlist",
@@ -124,11 +124,30 @@
   ],
   "samples": [
     {
+      "name": "Next Step",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-popular-web",
+        "itch-popular",
+        "itch-new-feed"
+      ]
+    },
+    {
       "name": "Scrap Robot Demo",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
-      "discoveryScore": 17,
+      "discoveryScore": 15,
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 0,
@@ -1029,25 +1048,6 @@
     },
     {
       "name": "Shroom: The Gathering",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 6,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "The Last Train",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
