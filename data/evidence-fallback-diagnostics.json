@@ -1,78 +1,77 @@
 {
-  "generatedAt": "2026-11-04T06:36:30.758Z",
+  "generatedAt": "2026-11-05T06:57:12.809Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2174,
+  "pendingSeo": 2167,
   "channelCounts": {
-    "pending": 514,
-    "wiki": 25,
-    "online": 1635
+    "pending": 518,
+    "wiki": 24,
+    "online": 1625
   },
   "fastClassCounts": {
-    "pending:pending": 514,
-    "wiki:pending": 25,
-    "online:pending": 1635
+    "pending:pending": 518,
+    "wiki:pending": 24,
+    "online:pending": 1625
   },
   "strategicCounts": {
-    "pending:0": 512,
+    "pending:0": 516,
     "wiki:0": 2,
-    "online:1": 1457,
-    "online:2": 178,
-    "wiki:2": 1,
+    "online:1": 1446,
+    "online:2": 179,
     "wiki:1": 22,
     "pending:1": 2
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1596
+      "count": 1586
     },
     {
       "id": "itch-newest-web",
-      "count": 1588
+      "count": 1578
     },
     {
       "id": "itch-new-feed",
-      "count": 1543
+      "count": 1533
     },
     {
       "id": "trends-rising-7d",
-      "count": 437
+      "count": 441
     },
     {
       "id": "trends-rising-30d",
-      "count": 285
+      "count": 291
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 220
+      "count": 222
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 168
+      "count": 169
     },
     {
       "id": "itch-new-popular-web",
-      "count": 152
+      "count": 153
     },
     {
       "id": "itch-popular",
-      "count": 152
+      "count": 153
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 130
+      "count": 131
     },
     {
       "id": "trends-rising-7d-itch-io",
-      "count": 101
+      "count": 102
     },
     {
       "id": "trends-rising-30d-itch-io",
-      "count": 68
+      "count": 72
     },
     {
       "id": "trends-rising-30d-indie-game",
-      "count": 55
+      "count": 56
     },
     {
       "id": "newgrounds-latest",
@@ -92,15 +91,15 @@
     },
     {
       "id": "steam-popular-new",
-      "count": 26
+      "count": 25
     },
     {
       "id": "steam-latest-indie",
-      "count": 13
+      "count": 12
     },
     {
       "id": "steam-new",
-      "count": 13
+      "count": 12
     },
     {
       "id": "itch-featured-feed",
@@ -124,6 +123,25 @@
     }
   ],
   "samples": [
+    {
+      "name": "Petri",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 5,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
     {
       "name": "Next Step",
       "channel": "online",
@@ -1030,25 +1048,6 @@
     },
     {
       "name": "Transcriptions of Time",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 6,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Shroom: The Gathering",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
