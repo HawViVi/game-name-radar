@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-11-06T06:56:55.121Z",
+  "generatedAt": "2026-11-07T06:08:23.680Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2159,
+  "pendingSeo": 2150,
   "channelCounts": {
-    "pending": 526,
-    "wiki": 26,
-    "online": 1607
+    "pending": 529,
+    "wiki": 21,
+    "online": 1600
   },
   "fastClassCounts": {
-    "pending:pending": 526,
-    "wiki:pending": 26,
-    "online:pending": 1607
+    "pending:pending": 529,
+    "wiki:pending": 21,
+    "online:pending": 1600
   },
   "strategicCounts": {
-    "pending:0": 522,
+    "pending:0": 524,
     "wiki:0": 2,
-    "online:1": 1428,
-    "online:2": 179,
-    "wiki:1": 24,
-    "pending:1": 4
+    "online:2": 183,
+    "online:1": 1417,
+    "wiki:1": 19,
+    "pending:1": 5
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1568
+      "count": 1559
     },
     {
       "id": "itch-newest-web",
-      "count": 1560
+      "count": 1551
     },
     {
       "id": "itch-new-feed",
-      "count": 1515
+      "count": 1506
     },
     {
       "id": "trends-rising-7d",
-      "count": 446
+      "count": 448
     },
     {
       "id": "trends-rising-30d",
-      "count": 292
+      "count": 294
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 224
+      "count": 225
     },
     {
       "id": "trends-rising-30d-horror-game",
@@ -51,15 +51,15 @@
     },
     {
       "id": "itch-new-popular-web",
-      "count": 153
+      "count": 155
     },
     {
       "id": "itch-popular",
-      "count": 153
+      "count": 155
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 133
+      "count": 134
     },
     {
       "id": "trends-rising-7d-itch-io",
@@ -71,7 +71,7 @@
     },
     {
       "id": "trends-rising-30d-indie-game",
-      "count": 56
+      "count": 58
     },
     {
       "id": "newgrounds-latest",
@@ -82,10 +82,6 @@
       "count": 30
     },
     {
-      "id": "steam-popular-new",
-      "count": 27
-    },
-    {
       "id": "newgrounds-daily-top",
       "count": 27
     },
@@ -94,12 +90,16 @@
       "count": 27
     },
     {
+      "id": "steam-popular-new",
+      "count": 22
+    },
+    {
       "id": "itch-featured-feed",
-      "count": 13
+      "count": 15
     },
     {
       "id": "itch-featured",
-      "count": 13
+      "count": 15
     },
     {
       "id": "steam-latest-indie",
@@ -111,18 +111,40 @@
     },
     {
       "id": "y8-new",
-      "count": 5
+      "count": 6
+    },
+    {
+      "id": "lagged-new",
+      "count": 3
     },
     {
       "id": "steam-top-wishlist",
       "count": 2
     },
     {
-      "id": "lagged-new",
-      "count": 2
+      "id": "crazygames-new",
+      "count": 1
     }
   ],
   "samples": [
+    {
+      "name": "Sleigh the Spire 🎄🎁",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 17,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 6,
+      "strategicCount": 2,
+      "sourceCount": 4,
+      "sourceIds": [
+        "itch-new-popular-web",
+        "itch-popular",
+        "itch-featured-feed",
+        "itch-featured"
+      ]
+    },
     {
       "name": "Petri",
       "channel": "online",
@@ -743,6 +765,25 @@
       ]
     },
     {
+      "name": "Tower Defense",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
       "name": "Empire Ticker (エンパイアティッカー) — Prototype",
       "channel": "online",
       "fastClass": "pending",
@@ -1017,44 +1058,6 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 9,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Paws to the Stars",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 9,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Transcriptions of Time",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 6,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
