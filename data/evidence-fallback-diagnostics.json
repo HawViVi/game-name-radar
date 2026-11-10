@@ -1,49 +1,50 @@
 {
-  "generatedAt": "2026-11-09T06:46:32.027Z",
+  "generatedAt": "2026-11-10T07:27:09.972Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2134,
+  "pendingSeo": 2131,
   "channelCounts": {
-    "pending": 530,
-    "wiki": 3,
-    "online": 1601
+    "pending": 533,
+    "wiki": 13,
+    "online": 1585
   },
   "fastClassCounts": {
-    "pending:pending": 530,
-    "wiki:pending": 3,
-    "online:pending": 1601
+    "pending:pending": 533,
+    "wiki:pending": 13,
+    "online:pending": 1585
   },
   "strategicCounts": {
-    "pending:0": 527,
+    "pending:0": 530,
     "wiki:0": 2,
-    "online:2": 183,
-    "online:1": 1418,
+    "online:1": 1403,
+    "online:2": 182,
+    "wiki:2": 1,
     "pending:1": 3,
-    "wiki:1": 1
+    "wiki:1": 10
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1561
+      "count": 1545
     },
     {
       "id": "itch-newest-web",
-      "count": 1552
+      "count": 1536
     },
     {
       "id": "itch-new-feed",
-      "count": 1508
+      "count": 1492
     },
     {
       "id": "trends-rising-7d",
-      "count": 451
+      "count": 454
     },
     {
       "id": "trends-rising-30d",
-      "count": 305
+      "count": 308
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 227
+      "count": 228
     },
     {
       "id": "trends-rising-30d-horror-game",
@@ -51,27 +52,27 @@
     },
     {
       "id": "itch-new-popular-web",
-      "count": 155
+      "count": 156
     },
     {
       "id": "itch-popular",
-      "count": 155
+      "count": 156
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 135
+      "count": 137
     },
     {
       "id": "trends-rising-7d-itch-io",
       "count": 103
     },
     {
-      "id": "trends-rising-30d-itch-io",
+      "id": "trends-rising-30d-indie-game",
       "count": 73
     },
     {
-      "id": "trends-rising-30d-indie-game",
-      "count": 70
+      "id": "trends-rising-30d-itch-io",
+      "count": 73
     },
     {
       "id": "newgrounds-latest",
@@ -83,11 +84,15 @@
     },
     {
       "id": "newgrounds-daily-top",
-      "count": 27
+      "count": 28
     },
     {
       "id": "newgrounds-top",
-      "count": 27
+      "count": 28
+    },
+    {
+      "id": "steam-popular-new",
+      "count": 14
     },
     {
       "id": "itch-featured-feed",
@@ -99,36 +104,50 @@
     },
     {
       "id": "steam-latest-indie",
-      "count": 12
+      "count": 13
     },
     {
       "id": "steam-new",
-      "count": 12
+      "count": 13
     },
     {
       "id": "y8-new",
-      "count": 7
-    },
-    {
-      "id": "steam-popular-new",
-      "count": 4
-    },
-    {
-      "id": "lagged-new",
-      "count": 3
+      "count": 5
     },
     {
       "id": "steam-top-wishlist",
+      "count": 2
+    },
+    {
+      "id": "lagged-new",
       "count": 2
     }
   ],
   "samples": [
     {
+      "name": "Season Shift",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 2,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 4,
+      "sourceIds": [
+        "itch-new-popular-web",
+        "itch-popular",
+        "newgrounds-daily-top",
+        "newgrounds-top"
+      ]
+    },
+    {
       "name": "Sleigh the Spire 🎄🎁",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
-      "discoveryScore": 17,
+      "discoveryScore": 15,
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 6,
@@ -1035,25 +1054,6 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 6,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Bureaucracy Simulator",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 9,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
