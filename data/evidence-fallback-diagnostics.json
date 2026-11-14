@@ -1,66 +1,65 @@
 {
-  "generatedAt": "2026-11-13T06:53:26.251Z",
+  "generatedAt": "2026-11-14T06:37:22.308Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2110,
+  "pendingSeo": 2098,
   "channelCounts": {
-    "pending": 544,
-    "wiki": 36,
-    "online": 1530
+    "pending": 550,
+    "wiki": 37,
+    "online": 1511
   },
   "fastClassCounts": {
-    "pending:pending": 544,
-    "wiki:pending": 36,
-    "online:pending": 1530
+    "pending:pending": 550,
+    "wiki:pending": 37,
+    "online:pending": 1511
   },
   "strategicCounts": {
-    "pending:0": 541,
+    "pending:0": 546,
     "wiki:0": 2,
-    "online:2": 186,
-    "online:1": 1344,
-    "pending:1": 3,
-    "wiki:2": 2,
-    "wiki:1": 32
+    "online:2": 187,
+    "online:1": 1324,
+    "pending:1": 4,
+    "wiki:1": 35
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1490
+      "count": 1471
     },
     {
       "id": "itch-newest-web",
-      "count": 1480
+      "count": 1461
     },
     {
       "id": "itch-new-feed",
-      "count": 1437
+      "count": 1418
     },
     {
       "id": "trends-rising-7d",
-      "count": 465
+      "count": 470
     },
     {
       "id": "trends-rising-30d",
-      "count": 320
+      "count": 324
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 231
+      "count": 233
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 174
+      "count": 175
     },
     {
       "id": "itch-new-popular-web",
-      "count": 159
+      "count": 160
     },
     {
       "id": "itch-popular",
-      "count": 159
+      "count": 160
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 144
+      "count": 147
     },
     {
       "id": "trends-rising-7d-itch-io",
@@ -68,7 +67,7 @@
     },
     {
       "id": "trends-rising-30d-indie-game",
-      "count": 81
+      "count": 84
     },
     {
       "id": "trends-rising-30d-itch-io",
@@ -76,7 +75,7 @@
     },
     {
       "id": "steam-popular-new",
-      "count": 37
+      "count": 38
     },
     {
       "id": "newgrounds-latest",
@@ -95,41 +94,59 @@
       "count": 27
     },
     {
-      "id": "steam-latest-indie",
-      "count": 15
-    },
-    {
-      "id": "steam-new",
-      "count": 15
-    },
-    {
       "id": "itch-featured-feed",
-      "count": 14
+      "count": 16
     },
     {
       "id": "itch-featured",
-      "count": 14
+      "count": 16
+    },
+    {
+      "id": "steam-latest-indie",
+      "count": 13
+    },
+    {
+      "id": "steam-new",
+      "count": 13
     },
     {
       "id": "y8-new",
       "count": 6
     },
     {
-      "id": "lagged-new",
-      "count": 3
+      "id": "steam-top-wishlist",
+      "count": 2
     },
     {
-      "id": "steam-top-wishlist",
+      "id": "lagged-new",
       "count": 2
     }
   ],
   "samples": [
     {
-      "name": "Idlecraft",
+      "name": "[FULL] DECOGEAR DIMENSIONS",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
       "discoveryScore": 17,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 4,
+      "sourceIds": [
+        "itch-new-popular-web",
+        "itch-popular",
+        "itch-featured-feed",
+        "itch-featured"
+      ]
+    },
+    {
+      "name": "Idlecraft",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 5,
@@ -1035,25 +1052,6 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 9,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "The Biggest Flame",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 6,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
