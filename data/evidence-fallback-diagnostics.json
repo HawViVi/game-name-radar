@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-11-14T06:37:22.308Z",
+  "generatedAt": "2026-11-15T06:44:00.010Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2098,
+  "pendingSeo": 2089,
   "channelCounts": {
-    "pending": 550,
-    "wiki": 37,
-    "online": 1511
+    "pending": 557,
+    "wiki": 18,
+    "online": 1514
   },
   "fastClassCounts": {
-    "pending:pending": 550,
-    "wiki:pending": 37,
-    "online:pending": 1511
+    "pending:pending": 557,
+    "wiki:pending": 18,
+    "online:pending": 1514
   },
   "strategicCounts": {
-    "pending:0": 546,
+    "pending:0": 553,
     "wiki:0": 2,
     "online:2": 187,
-    "online:1": 1324,
+    "online:1": 1327,
     "pending:1": 4,
-    "wiki:1": 35
+    "wiki:1": 16
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1471
+      "count": 1473
     },
     {
       "id": "itch-newest-web",
-      "count": 1461
+      "count": 1463
     },
     {
       "id": "itch-new-feed",
-      "count": 1418
+      "count": 1420
     },
     {
       "id": "trends-rising-7d",
-      "count": 470
+      "count": 475
     },
     {
       "id": "trends-rising-30d",
-      "count": 324
+      "count": 328
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 233
+      "count": 234
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 175
+      "count": 178
     },
     {
       "id": "itch-new-popular-web",
@@ -59,7 +59,7 @@
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 147
+      "count": 151
     },
     {
       "id": "trends-rising-7d-itch-io",
@@ -67,15 +67,11 @@
     },
     {
       "id": "trends-rising-30d-indie-game",
-      "count": 84
+      "count": 85
     },
     {
       "id": "trends-rising-30d-itch-io",
       "count": 74
-    },
-    {
-      "id": "steam-popular-new",
-      "count": 38
     },
     {
       "id": "newgrounds-latest",
@@ -94,6 +90,10 @@
       "count": 27
     },
     {
+      "id": "steam-popular-new",
+      "count": 19
+    },
+    {
       "id": "itch-featured-feed",
       "count": 16
     },
@@ -103,11 +103,11 @@
     },
     {
       "id": "steam-latest-indie",
-      "count": 13
+      "count": 14
     },
     {
       "id": "steam-new",
-      "count": 13
+      "count": 14
     },
     {
       "id": "y8-new",
@@ -120,9 +120,34 @@
     {
       "id": "lagged-new",
       "count": 2
+    },
+    {
+      "id": "poki-new",
+      "count": 1
     }
   ],
   "samples": [
+    {
+      "name": "Cycle of the First Dawn",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 18,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 7,
+      "strategicCount": 2,
+      "sourceCount": 7,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular",
+        "steam-latest-indie",
+        "steam-new"
+      ]
+    },
     {
       "name": "[FULL] DECOGEAR DIMENSIONS",
       "channel": "online",
@@ -1033,25 +1058,6 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 6,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Ensis IDLE",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 9,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
