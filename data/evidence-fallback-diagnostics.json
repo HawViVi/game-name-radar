@@ -1,53 +1,54 @@
 {
-  "generatedAt": "2026-11-16T06:43:01.537Z",
+  "generatedAt": "2026-11-17T08:02:26.994Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2077,
+  "pendingSeo": 2073,
   "channelCounts": {
-    "pending": 562,
-    "wiki": 3,
-    "online": 1512
+    "pending": 567,
+    "online": 1489,
+    "wiki": 17
   },
   "fastClassCounts": {
-    "pending:pending": 562,
-    "wiki:pending": 3,
-    "online:pending": 1512
+    "pending:pending": 567,
+    "online:pending": 1489,
+    "wiki:pending": 17
   },
   "strategicCounts": {
-    "pending:0": 557,
+    "pending:0": 562,
+    "online:1": 1303,
     "wiki:0": 2,
-    "online:2": 190,
-    "online:1": 1322,
-    "wiki:1": 1,
+    "online:2": 186,
+    "wiki:2": 1,
+    "wiki:1": 14,
     "pending:1": 5
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1471
+      "count": 1449
     },
     {
       "id": "itch-newest-web",
-      "count": 1461
+      "count": 1439
     },
     {
       "id": "itch-new-feed",
-      "count": 1418
+      "count": 1396
     },
     {
       "id": "trends-rising-7d",
-      "count": 480
+      "count": 485
     },
     {
       "id": "trends-rising-30d",
-      "count": 332
+      "count": 335
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 236
+      "count": 238
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 181
+      "count": 182
     },
     {
       "id": "itch-new-popular-web",
@@ -59,11 +60,11 @@
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 154
+      "count": 156
     },
     {
       "id": "trends-rising-7d-itch-io",
-      "count": 105
+      "count": 106
     },
     {
       "id": "trends-rising-30d-indie-game",
@@ -71,7 +72,7 @@
     },
     {
       "id": "trends-rising-30d-itch-io",
-      "count": 74
+      "count": 76
     },
     {
       "id": "newgrounds-latest",
@@ -90,6 +91,10 @@
       "count": 27
     },
     {
+      "id": "steam-popular-new",
+      "count": 18
+    },
+    {
       "id": "itch-featured-feed",
       "count": 17
     },
@@ -99,62 +104,32 @@
     },
     {
       "id": "steam-latest-indie",
-      "count": 14
+      "count": 15
     },
     {
       "id": "steam-new",
-      "count": 14
+      "count": 15
     },
     {
       "id": "y8-new",
-      "count": 7
-    },
-    {
-      "id": "steam-popular-new",
-      "count": 4
-    },
-    {
-      "id": "lagged-new",
-      "count": 3
+      "count": 5
     },
     {
       "id": "steam-top-wishlist",
       "count": 2
     },
     {
-      "id": "poki-new",
-      "count": 1
-    },
-    {
-      "id": "crazygames-new",
-      "count": 1
+      "id": "lagged-new",
+      "count": 2
     }
   ],
   "samples": [
-    {
-      "name": "Ghost rush!",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 16,
-      "platforms": 2,
-      "browserPlayable": true,
-      "nameRisk": 9,
-      "strategicCount": 2,
-      "sourceCount": 4,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "poki-new"
-      ]
-    },
     {
       "name": "Cycle of the First Dawn",
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
-      "discoveryScore": 18,
+      "discoveryScore": 16,
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 7,
@@ -175,7 +150,7 @@
       "channel": "online",
       "fastClass": "pending",
       "fastScore": 0,
-      "discoveryScore": 17,
+      "discoveryScore": 15,
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 0,
@@ -1061,6 +1036,25 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 9,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
+      ]
+    },
+    {
+      "name": "Bumper to Billions",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 6,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
