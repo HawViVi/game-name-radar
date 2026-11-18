@@ -1,46 +1,45 @@
 {
-  "generatedAt": "2026-11-17T08:02:26.994Z",
+  "generatedAt": "2026-11-18T07:38:45.666Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2073,
+  "pendingSeo": 2071,
   "channelCounts": {
-    "pending": 567,
-    "online": 1489,
-    "wiki": 17
+    "pending": 577,
+    "online": 1472,
+    "wiki": 22
   },
   "fastClassCounts": {
-    "pending:pending": 567,
-    "online:pending": 1489,
-    "wiki:pending": 17
+    "pending:pending": 577,
+    "online:pending": 1472,
+    "wiki:pending": 22
   },
   "strategicCounts": {
-    "pending:0": 562,
-    "online:1": 1303,
+    "pending:0": 572,
+    "online:1": 1286,
     "wiki:0": 2,
     "online:2": 186,
-    "wiki:2": 1,
-    "wiki:1": 14,
+    "wiki:1": 20,
     "pending:1": 5
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1449
+      "count": 1431
     },
     {
       "id": "itch-newest-web",
-      "count": 1439
+      "count": 1421
     },
     {
       "id": "itch-new-feed",
-      "count": 1396
+      "count": 1378
     },
     {
       "id": "trends-rising-7d",
-      "count": 485
+      "count": 493
     },
     {
       "id": "trends-rising-30d",
-      "count": 335
+      "count": 343
     },
     {
       "id": "trends-rising-7d-horror-game",
@@ -48,19 +47,19 @@
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 182
-    },
-    {
-      "id": "itch-new-popular-web",
-      "count": 160
-    },
-    {
-      "id": "itch-popular",
-      "count": 160
+      "count": 183
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 156
+      "count": 164
+    },
+    {
+      "id": "itch-new-popular-web",
+      "count": 161
+    },
+    {
+      "id": "itch-popular",
+      "count": 161
     },
     {
       "id": "trends-rising-7d-itch-io",
@@ -68,7 +67,7 @@
     },
     {
       "id": "trends-rising-30d-indie-game",
-      "count": 86
+      "count": 93
     },
     {
       "id": "trends-rising-30d-itch-io",
@@ -92,7 +91,7 @@
     },
     {
       "id": "steam-popular-new",
-      "count": 18
+      "count": 24
     },
     {
       "id": "itch-featured-feed",
@@ -124,6 +123,27 @@
     }
   ],
   "samples": [
+    {
+      "name": "Zone Idle",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 18,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 9,
+      "strategicCount": 2,
+      "sourceCount": 7,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular",
+        "steam-latest-indie",
+        "steam-new"
+      ]
+    },
     {
       "name": "Cycle of the First Dawn",
       "channel": "online",
@@ -1036,25 +1056,6 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 9,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "Bumper to Billions",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 6,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
