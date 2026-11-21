@@ -1,58 +1,57 @@
 {
-  "generatedAt": "2026-11-20T07:25:50.712Z",
+  "generatedAt": "2026-11-21T07:19:48.337Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2058,
+  "pendingSeo": 2052,
   "channelCounts": {
-    "pending": 579,
-    "wiki": 14,
-    "online": 1465
+    "pending": 585,
+    "wiki": 8,
+    "online": 1459
   },
   "fastClassCounts": {
-    "pending:pending": 579,
-    "wiki:pending": 14,
-    "online:pending": 1465
+    "pending:pending": 585,
+    "wiki:pending": 8,
+    "online:pending": 1459
   },
   "strategicCounts": {
-    "pending:0": 576,
+    "pending:0": 582,
     "wiki:0": 2,
-    "online:1": 1278,
+    "online:1": 1272,
     "online:2": 187,
-    "wiki:1": 11,
-    "pending:1": 3,
-    "wiki:2": 1
+    "wiki:1": 6,
+    "pending:1": 3
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1424
+      "count": 1418
     },
     {
       "id": "itch-newest-web",
-      "count": 1414
+      "count": 1408
     },
     {
       "id": "itch-new-feed",
-      "count": 1371
+      "count": 1365
     },
     {
       "id": "trends-rising-7d",
-      "count": 497
+      "count": 502
     },
     {
       "id": "trends-rising-30d",
-      "count": 348
+      "count": 350
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 239
+      "count": 244
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 183
+      "count": 185
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 167
+      "count": 168
     },
     {
       "id": "itch-new-popular-web",
@@ -91,16 +90,12 @@
       "count": 27
     },
     {
-      "id": "steam-popular-new",
-      "count": 16
-    },
-    {
       "id": "steam-latest-indie",
-      "count": 16
+      "count": 15
     },
     {
       "id": "steam-new",
-      "count": 16
+      "count": 15
     },
     {
       "id": "itch-featured-feed",
@@ -109,6 +104,10 @@
     {
       "id": "itch-featured",
       "count": 15
+    },
+    {
+      "id": "steam-popular-new",
+      "count": 10
     },
     {
       "id": "y8-new",
