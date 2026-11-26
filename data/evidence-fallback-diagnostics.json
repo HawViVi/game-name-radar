@@ -1,57 +1,57 @@
 {
-  "generatedAt": "2026-11-25T08:45:40.025Z",
+  "generatedAt": "2026-11-26T08:30:53.185Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2048,
+  "pendingSeo": 2046,
   "channelCounts": {
-    "pending": 597,
-    "wiki": 13,
-    "online": 1438
+    "pending": 608,
+    "wiki": 14,
+    "online": 1424
   },
   "fastClassCounts": {
-    "pending:pending": 597,
-    "wiki:pending": 13,
-    "online:pending": 1438
+    "pending:pending": 608,
+    "wiki:pending": 14,
+    "online:pending": 1424
   },
   "strategicCounts": {
-    "pending:0": 595,
+    "pending:0": 606,
     "wiki:0": 2,
     "online:2": 189,
-    "online:1": 1249,
-    "wiki:1": 11,
+    "online:1": 1235,
+    "wiki:1": 12,
     "pending:1": 2
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1395
+      "count": 1380
     },
     {
       "id": "itch-newest-web",
-      "count": 1384
+      "count": 1369
     },
     {
       "id": "itch-new-feed",
-      "count": 1342
+      "count": 1327
     },
     {
       "id": "trends-rising-7d",
-      "count": 517
+      "count": 528
     },
     {
       "id": "trends-rising-30d",
-      "count": 360
+      "count": 366
     },
     {
       "id": "trends-rising-7d-horror-game",
-      "count": 249
+      "count": 254
     },
     {
       "id": "trends-rising-30d-horror-game",
-      "count": 188
+      "count": 190
     },
     {
       "id": "trends-rising-7d-indie-game",
-      "count": 174
+      "count": 178
     },
     {
       "id": "itch-new-popular-web",
@@ -63,15 +63,15 @@
     },
     {
       "id": "trends-rising-7d-itch-io",
-      "count": 111
+      "count": 114
     },
     {
       "id": "trends-rising-30d-indie-game",
-      "count": 101
+      "count": 105
     },
     {
       "id": "trends-rising-30d-itch-io",
-      "count": 81
+      "count": 82
     },
     {
       "id": "newgrounds-latest",
@@ -91,7 +91,7 @@
     },
     {
       "id": "steam-popular-new",
-      "count": 16
+      "count": 17
     },
     {
       "id": "steam-latest-indie",
@@ -111,7 +111,7 @@
     },
     {
       "id": "y8-new",
-      "count": 5
+      "count": 6
     },
     {
       "id": "lagged-new",
@@ -141,24 +141,6 @@
         "itch-new",
         "itch-newest-web",
         "steam-popular-new"
-      ]
-    },
-    {
-      "name": "Of The World",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 17,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 12,
-      "strategicCount": 2,
-      "sourceCount": 4,
-      "sourceIds": [
-        "itch-new-popular-web",
-        "itch-popular",
-        "itch-featured-feed",
-        "itch-featured"
       ]
     },
     {
@@ -201,6 +183,24 @@
         "itch-popular",
         "steam-latest-indie",
         "steam-new"
+      ]
+    },
+    {
+      "name": "Of The World",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 15,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 12,
+      "strategicCount": 2,
+      "sourceCount": 4,
+      "sourceIds": [
+        "itch-new-popular-web",
+        "itch-popular",
+        "itch-featured-feed",
+        "itch-featured"
       ]
     },
     {
