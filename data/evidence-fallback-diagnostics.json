@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-11-26T08:30:53.185Z",
+  "generatedAt": "2026-11-27T08:44:44.796Z",
   "totalCandidates": 3000,
-  "pendingSeo": 2046,
+  "pendingSeo": 2039,
   "channelCounts": {
     "pending": 608,
-    "wiki": 14,
-    "online": 1424
+    "wiki": 11,
+    "online": 1420
   },
   "fastClassCounts": {
     "pending:pending": 608,
-    "wiki:pending": 14,
-    "online:pending": 1424
+    "wiki:pending": 11,
+    "online:pending": 1420
   },
   "strategicCounts": {
     "pending:0": 606,
     "wiki:0": 2,
     "online:2": 189,
-    "online:1": 1235,
-    "wiki:1": 12,
+    "online:1": 1231,
+    "wiki:1": 9,
     "pending:1": 2
   },
   "topSources": [
     {
       "id": "itch-new",
-      "count": 1380
+      "count": 1377
     },
     {
       "id": "itch-newest-web",
-      "count": 1369
+      "count": 1366
     },
     {
       "id": "itch-new-feed",
-      "count": 1327
+      "count": 1324
     },
     {
       "id": "trends-rising-7d",
@@ -55,11 +55,11 @@
     },
     {
       "id": "itch-new-popular-web",
-      "count": 165
+      "count": 166
     },
     {
       "id": "itch-popular",
-      "count": 165
+      "count": 166
     },
     {
       "id": "trends-rising-7d-itch-io",
@@ -90,10 +90,6 @@
       "count": 27
     },
     {
-      "id": "steam-popular-new",
-      "count": 17
-    },
-    {
       "id": "steam-latest-indie",
       "count": 16
     },
@@ -110,15 +106,19 @@
       "count": 15
     },
     {
-      "id": "y8-new",
-      "count": 6
+      "id": "steam-popular-new",
+      "count": 14
     },
     {
-      "id": "lagged-new",
-      "count": 3
+      "id": "y8-new",
+      "count": 5
     },
     {
       "id": "steam-top-wishlist",
+      "count": 2
+    },
+    {
+      "id": "lagged-new",
       "count": 2
     }
   ],
@@ -141,6 +141,25 @@
         "itch-new",
         "itch-newest-web",
         "steam-popular-new"
+      ]
+    },
+    {
+      "name": "Brass Bones",
+      "channel": "online",
+      "fastClass": "pending",
+      "fastScore": 0,
+      "discoveryScore": 17,
+      "platforms": 1,
+      "browserPlayable": true,
+      "nameRisk": 0,
+      "strategicCount": 2,
+      "sourceCount": 5,
+      "sourceIds": [
+        "itch-newest-web",
+        "itch-new",
+        "itch-new-feed",
+        "itch-new-popular-web",
+        "itch-popular"
       ]
     },
     {
@@ -1037,25 +1056,6 @@
       "platforms": 1,
       "browserPlayable": true,
       "nameRisk": 6,
-      "strategicCount": 2,
-      "sourceCount": 5,
-      "sourceIds": [
-        "itch-newest-web",
-        "itch-new",
-        "itch-new-feed",
-        "itch-new-popular-web",
-        "itch-popular"
-      ]
-    },
-    {
-      "name": "8-Ball Idle",
-      "channel": "online",
-      "fastClass": "pending",
-      "fastScore": 0,
-      "discoveryScore": 15,
-      "platforms": 1,
-      "browserPlayable": true,
-      "nameRisk": 12,
       "strategicCount": 2,
       "sourceCount": 5,
       "sourceIds": [
